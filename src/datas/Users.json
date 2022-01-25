@@ -1,0 +1,9 @@
+[
+    {
+        "id" : 1,
+        "nom" : "Dumay",
+        "prenom" : "Loïc",
+        "dateNaissance" : "1993-10-22",
+        "mail" : "loic.dumay@edu.itescia.fr"
+    }
+]
