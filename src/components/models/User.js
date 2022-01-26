@@ -20,7 +20,7 @@ function User(){
     /**
      * Calculate the age
      */
-    function caclulateAge(age){
+    function calculateAge(age){
         today = new Date()
         console.log('Age : '+today+'')
         console.log('Age : '+age+'')
