@@ -14,7 +14,6 @@ function App() {
 	const [currentUser, setUser] = useState();
 	return (
 		<BrowserRouter>
-			<Header />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/register" element={<Register currentUser={currentUser} setUser={setUser} />} />

@@ -17,28 +17,23 @@ function Header() {
 	}
 
 	return (
-		<nav>
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
-				</li>
-				<li>
-					<Link to="/register">S'enregistrer</Link>
-				</li>
-				<li>
-					<Link to="/result">Résultat</Link>
-				</li>
-				<li>
-					<Link to="/films">Films</Link>
-				</li>
-				<li>
-					<Link to="/film-infos">Films Infos</Link>
-				</li>
-				<li>
-					<Link to="/wishlist">Liste de souhait</Link>
-				</li>
-			</ul>
-		</nav>
+		<header>
+			<Row>
+				<Col>
+					<Link to="/" title="Retour à l'accueil" alt="Retour à l'accueil">Accueil</Link>
+				</Col>
+				<Col>
+					<h1>Title Project</h1>
+				</Col>
+				<Col></Col>
+			</Row>
+			<hr/>
+			<Row>
+				<Col>
+					<h2>{currentPage}</h2>
+				</Col>
+			</Row>
+		</header>
 	)
 }
 export default Header

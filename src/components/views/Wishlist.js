@@ -1,5 +1,7 @@
+import { Container, Row } from "react-bootstrap"
 import Film from "../models/Film"
 import Films from "../views/Films"
+import Header from "./Header"
 
 function Wishlist(currentUser) {
 	//let filmList = currentUser.filmList;
@@ -35,15 +37,21 @@ function Wishlist(currentUser) {
 	]
 
 	return (
-		<div>
-			<h1>Liste d'envies</h1>
-			{filmList.map((film) => (
-				<li key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
-					<Films film={film} />
-				</li>
-			)
-			)}
-		</div>
+        <div>
+            <Header />
+            <Container>
+                <Row>
+                    <div className="page">
+                        {filmList.map((film) => (
+                            <li key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
+                                <Films film={film} />
+                            </li>
+                        )
+                        )}
+                    </div>
+                </Row>
+            </Container>
+        </div>
 	)
 }
 export default Wishlist
