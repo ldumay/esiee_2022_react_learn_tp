@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import Home from './components/views/Home';
-import Header from "./components/Header";
+import Header from "./components/views/Header";
 import Register from './components/views/Register';
 import Result from './components/views/Result';
 import Films from './components/views/Films';
