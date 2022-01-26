@@ -40,16 +40,16 @@ function Wishlist(currentUser) {
         <div>
             <Header />
             <Container>
-                <Row>
-                    <div className="page">
+                <div className="page">
+                    <Row>
                         {filmList.map((film) => (
                             <li key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
                                 <Films film={film} />
                             </li>
                         )
                         )}
-                    </div>
-                </Row>
+                    </Row>
+                </div>
             </Container>
         </div>
 	)
