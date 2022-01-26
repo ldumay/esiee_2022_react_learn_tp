@@ -9,6 +9,18 @@ function Header() {
 				<li>
 					<Link to="/register">S'enregistrer</Link>
 				</li>
+				<li>
+					<Link to="/result">Résultat</Link>
+				</li>
+				<li>
+					<Link to="/films">Films</Link>
+				</li>
+				<li>
+					<Link to="/film-infos">Films Infos</Link>
+				</li>
+				<li>
+					<Link to="/wishlist">Liste de souhait</Link>
+				</li>
 			</ul>
 		</nav>
 	)
