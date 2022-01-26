@@ -1,0 +1,20 @@
+.catalog{
+    text-align: center;
+    .choixFilm{
+        margin: 0;
+        padding: 1%;
+        a{
+            color: rgba(0, 0, 0, 1);
+            text-decoration: none;
+        }
+        .choixFilmItem{
+            margin: 0;
+            padding: 5px;
+            border: 1px solid rgba(0, 0, 0, 1);
+            background: rgba(67, 124, 190, 1.000);
+        }
+        .btnSupprFilm{
+            margin-top: 5px;
+        }
+    }
+}
