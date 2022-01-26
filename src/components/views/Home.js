@@ -1,3 +1,4 @@
+import '../../styles/Home.css'
 import logo from '../../logo.svg';
 import Film from '../models/Film';
 
@@ -10,15 +11,13 @@ function Home(){
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <a className="App-link"
-                    href="/start"
+                    href="/register"
                     //target="_blank"
                     rel="noopener noreferrer"
                 >
                 Participer au concours 
                 </a>
             </header>
-
-            <Film film={film} />
         </div>
     )
 }
