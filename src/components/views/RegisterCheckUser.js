@@ -29,6 +29,7 @@ function RegisterCheckUser(props){
                     </Row>
                 </div>
             </Container>
+            {Checkmail()}
         </div> 
     )
 }
