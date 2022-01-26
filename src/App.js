@@ -8,6 +8,7 @@ import Result from './components/views/Result';
 import Films from './components/views/Films';
 import FilmsInfos from './components/views/FilmsInfos';
 import Wishlist from './components/views/Wishlist';
+import Test from './components/views/Test';
 import { useState } from 'react';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/test" element={<Test />} />
 				<Route path="/register" element={<Register currentUser={currentUser} setUser={setUser} />} />
 				<Route path="/result" element={<Result />} />
 				<Route path="/films" element={<Films />} />

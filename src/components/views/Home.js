@@ -23,6 +23,7 @@ function Home(){
                     <h2>Dev test</h2>
                     <ul>
                         <li><a className="App-link" href="/">Accueil</a></li>
+                        <li><a className="App-link" href="/test">Test</a></li>
                         <li><a className="App-link" href="/register">Insription</a></li>
                         <li><a className="App-link" href="/result">Résultat</a></li>
                         <li><a className="App-link" href="#questions">Questionnaire (non lié)</a></li>
