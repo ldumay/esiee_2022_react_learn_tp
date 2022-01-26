@@ -1,27 +1,27 @@
 export const data = [
     {
         "idQuestion" : 1, 
-        "Text" : "ceci est un texte ?", 
+        "Text" : "Quel est la 1er entreprise de Elon Musk ?", 
         "Answer" : {
-            "choix1" : "rep1",
-            "choix2" : "rep2",
-            "choix3" : "rep3", 
-            "choix4" : "rep4", 
-            "choix5" : "rep5"
+            "choix1" : "Paypal",
+            "choix2" : "Tesla",
+            "choix3" : "SpaceX", 
+            "choix4" : "NeuraLink", 
+            "choix5" : "Hyperloop"
         },
-        "Correct" : ""
+        "Correct" : "Paypal"
     },
     {
         "idQuestion" : 2, 
-        "Text" : "", 
+        "Text" : "Miles Morales, alias Spider-Man", 
         "Answer" : {
-            "choix1" : "",
-            "choix2" : "",
-            "choix3" : "", 
-            "choix4" : "", 
-            "choix5" : ""
+            "choix1" : "Queens, New York, Terre-1610",
+            "choix2" : "Bronx, New York, Terre-1610",
+            "choix3" : "Brooklyn, New York, Terre-1610", 
+            "choix4" : "Harlem, New York, Terre-1610", 
+            "choix5" : "Manhattan, New York, Terre-1610"
         },
-        "Correct" : ""
+        "Correct" : "Brooklyn, New York, Terre-1610"
     },
     {
         "idQuestion" : 3, 
