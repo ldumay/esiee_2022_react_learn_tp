@@ -2,7 +2,7 @@
 import { useState } from "react"
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function Register(props){
     const [inputFirstName,setFirstName]         = useState()
@@ -64,8 +64,7 @@ function Register(props){
         console.log(`email,     ${props.inputEmail}`,); 
 
         //navigate("/register/Check_user");
-        //<Navigate to="/register/Check_user" replace={true} />
-        
+        //<Navigate to="/register/Check_user" replace={true} />     
     }
 
     return (
@@ -95,8 +94,9 @@ function Register(props){
                                                 onChange={(e) => checkValue("email",e.target.value)} /> 
                 </label><br/>
 
-                <input type="submit" value="Validation RGPD" />
-                
+                <Link to="/register/Check_user">
+                    <input type="submit" value="Validation RGPD" />
+                </Link>
             </form>
 
             
