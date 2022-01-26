@@ -8,7 +8,7 @@ function Header() {
 	const page = useLocation()
 	switch(page.pathname){
 		case "/": currentPage = "Accueil"; break;
-		case "/register": currentPage = "Accueil"; break;
+		case "/register": currentPage = "Inscription"; break;
 		//--> cas questionnaire
 		case "/result": currentPage = "Résultat du qestionnaire"; break;
 		case "/films": currentPage = "Liste de films"; break;
@@ -20,18 +20,12 @@ function Header() {
 		<header>
 			<Row>
 				<Col>
-					<Link to="/" title="Retour à l'accueil" alt="Retour à l'accueil">Accueil</Link>
+					<Link to="/" title="Retour à l'accueil" alt="Retour à l'accueil">FlexÔCinosh</Link>
 				</Col>
 				<Col>
-					<h1>Title Project</h1>
+					<h1>{currentPage}</h1>
 				</Col>
 				<Col></Col>
-			</Row>
-			<hr/>
-			<Row>
-				<Col>
-					<h2>{currentPage}</h2>
-				</Col>
 			</Row>
 		</header>
 	)
