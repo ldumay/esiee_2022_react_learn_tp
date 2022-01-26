@@ -4,13 +4,15 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useState } from "react"
 import PhoneInput from 'react-phone-number-input'
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
-function Register(){
+
+function Register(props){
     const [inputFirstName,setFirstName]         = useState()
     const [inputLastName,setLastName]           = useState()
     const [inputAge,setage]                     = useState()
     const [inputPhone_number,setPhone_number]   = useState()
-    const [inputEmail,setEmail]                 = useState()
+    //const [inputEmail,setEmail]                 = useState()
 
     function checkValue(type,value){
         switch (type) {
@@ -38,11 +40,13 @@ function Register(){
                 break 
 
             case 'email':
-                const emailform = !! value.match(/.+@.+/);
                 const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (value.match(regEmail)){
-                    console.log("Bon format")
+                    props.setEmail(value)
                     
+                    console.log("good format")
+                    
+                    console.log(props.inputEmail)
                 }
                 else{
                     console.log("mauvais format")
@@ -52,6 +56,16 @@ function Register(){
             default:
               return null
           }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        console.log(`nom,       ${inputLastName}`,); 
+        console.log(`prénom,    ${inputFirstName}`,);    
+        console.log(`age,       ${inputAge}`,); 
+        console.log(`tel,       ${inputPhone_number}`,); 
+        console.log(`email,     ${props.inputEmail}`,);    
     }
 
     return (
@@ -110,12 +124,14 @@ function Register(){
                                 </Form.Group>
 
                                 <Col align="center">
-                                    <Button
-                                        variant="primary"
-                                        type="submit"
-                                        onClick={() => alert(inputFirstName)}>
-                                        Validation RGPD
-                                    </Button>
+                                    <Link to="/register/Check_user">
+                                        <Button
+                                            variant="primary"
+                                            type="submit"
+                                            onClick={() => alert(inputFirstName)}>
+                                            Validation RGPD
+                                        </Button>
+                                    </Link>
                                 </Col>
                             </Form>
                         </Col>
@@ -124,6 +140,36 @@ function Register(){
                 </div>
             </Container>
         </div>
+            /*<form onSubmit={handleSubmit}>
+                <label> Nom         : <input    type="text"
+                                                value={inputLastName}
+                                                onChange={(e) => checkValue("LastName",e.target.value)} /> 
+                </label><br/>
+                <label> Prénom      : <input    type="text" 
+                                                value={inputFirstName} 
+                                                onChange={(e) => checkValue("firstName",e.target.value)} />  
+                </label><br/>
+                <label> Âge         : <input    type="text" 
+                                                value={inputAge}         
+                                                onChange={(e) => checkValue("age",e.target.value)} /> 
+                </label><br/>
+                <label> Téléphone   : <PhoneInput   type="text" 
+                                                    value={inputPhone_number}   
+                                                    onChange={setPhone_number} 
+                                                    maxLength={14}/> 
+                </label><br/>
+                <label> E-mail      : <input    type="email" 
+                                                value={props.inputEmail}       
+                                                onChange={(e) => checkValue("email",e.target.value)} /> 
+                </label><br/>
+
+                <Link to="/register/Check_user">
+                    <input type="submit" value="Validation RGPD" />
+                </Link>
+            </form>
+
+            
+        </div> */
     )
 }
 export default Register
