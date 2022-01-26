@@ -38,7 +38,7 @@ function Wishlist(currentUser) {
 		<div>
 			<h1>Liste d'envies</h1>
 			{filmList.map((film) => (
-				<li key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
+				<li key={`${film.id}-${film.nom}`} style={{ border: "1px solid black", backgroundColor: "lightgray" }}>
 					<Films film={film} />
 				</li>
 			)
