@@ -9,6 +9,7 @@ function Header() {
 	switch(page.pathname){
 		case "/": currentPage = "Accueil"; break;
 		case "/register": currentPage = "Inscription"; break;
+		case "/register/Check_user": currentPage = "Résultat de l'inscription"; break;
 		//--> cas questionnaire
 		case "/result": currentPage = "Résultat du qestionnaire"; break;
 		case "/catalog": currentPage = "Liste de films"; break;

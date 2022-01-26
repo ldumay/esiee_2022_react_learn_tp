@@ -1,4 +1,6 @@
+import { Col, Container, Row } from 'react-bootstrap'
 import 'react-phone-number-input/style.css'
+import Header from './Header'
 //const [inputEmail, setEmail] = useState();
 
 function RegisterCheckUser(props){
@@ -6,8 +8,17 @@ function RegisterCheckUser(props){
 
     return (
         <div>
-            <h1>CheckUser Sheet</h1>
-            Mail : {props.inputEmail}
+            <Header />
+            <Container>
+                <div className="page">
+                    <Row>
+                        <Col>
+                            <h1>CheckUser Sheet</h1>
+                            <p>Mail : {props.inputEmail}</p>
+                        </Col>
+                    </Row>
+                </div>
+            </Container>
         </div> 
     )
 }

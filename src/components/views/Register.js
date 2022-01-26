@@ -12,7 +12,7 @@ function Register(props){
     const [inputLastName,setLastName]           = useState()
     const [inputAge,setage]                     = useState()
     const [inputPhone_number,setPhone_number]   = useState()
-    //const [inputEmail,setEmail]                 = useState()
+    const [inputEmail,setEmail]                 = useState()
 
     function checkValue(type,value){
         switch (type) {
@@ -76,7 +76,7 @@ function Register(props){
                     <Row>
                         <Col md="2"></Col>
                         <Col md="8">
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Nom</Form.Label>
                                     <Form.Control
@@ -141,27 +141,6 @@ function Register(props){
             </Container>
         </div>
             /*<form onSubmit={handleSubmit}>
-                <label> Nom         : <input    type="text"
-                                                value={inputLastName}
-                                                onChange={(e) => checkValue("LastName",e.target.value)} /> 
-                </label><br/>
-                <label> Prénom      : <input    type="text" 
-                                                value={inputFirstName} 
-                                                onChange={(e) => checkValue("firstName",e.target.value)} />  
-                </label><br/>
-                <label> Âge         : <input    type="text" 
-                                                value={inputAge}         
-                                                onChange={(e) => checkValue("age",e.target.value)} /> 
-                </label><br/>
-                <label> Téléphone   : <PhoneInput   type="text" 
-                                                    value={inputPhone_number}   
-                                                    onChange={setPhone_number} 
-                                                    maxLength={14}/> 
-                </label><br/>
-                <label> E-mail      : <input    type="email" 
-                                                value={props.inputEmail}       
-                                                onChange={(e) => checkValue("email",e.target.value)} /> 
-                </label><br/>
 
                 <Link to="/register/Check_user">
                     <input type="submit" value="Validation RGPD" />
