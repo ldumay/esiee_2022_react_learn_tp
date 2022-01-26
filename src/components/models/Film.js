@@ -2,11 +2,11 @@
  * Model of Film
  */
 class Film {
-	constructor(id, nom, imageUrl, genre, dateSortie, description, ratio) {
+	constructor(id, title, image, genres, dateSortie, description, ratio) {
 		this.id = id;
-		this.nom = nom;
-		this.imageUrl = imageUrl;
-		this.genre = genre;
+		this.title = title;
+		this.image = image;
+		this.genres = genres;
 		this.dateSortie = dateSortie;
 		this.description = description;
 		this.ratio = ratio;
@@ -14,15 +14,15 @@ class Film {
 
 	showFilm() {
 		return (
-			<div id="{id-nom}" class="col-md-12">
-				<h3>#{this.id} - {this.nom}</h3>
+			<div id="{id-title}" class="col-md-12">
+				<h3>#{this.id} - {this.title}</h3>
 				<img
 					className="imageFilm"
-					alt="{this.id - this.nom}"
-					src={this.imageUrl}
+					alt="{this.id - this.title}"
+					src={this.image}
 				/>
 				<p>
-					Genre : {this.genre}
+					Genre : {this.genres}
 					Date de sortie : {this.dateSortie}
 					Description : {this.description}
 					Ratio : {this.ratio}
