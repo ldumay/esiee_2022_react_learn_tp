@@ -1,27 +1,21 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import "../../styles/FilmListStyles.scss";
 
 function BoxOffices() {
 
 	const[films, setFilms] = useState()
 	const domain = "https://imdb-api.com/en/API"
-	const boxOfficeUrl = "/BoxOffice/k_hiba3sak";
-	const filmUrl = "Title/k_hiba3sak/"
+	const comingSoonUrl = "/ComingSoon/k_hiba3sak";
 
 	var movieList = []
 	const[movie, setFilm] = useState()
 
 	const fetchData = async () => {
-		const response = await axios.get(domain+boxOfficeUrl);
+		const response = await axios.get(domain+comingSoonUrl);
 
 		setFilms(response.data.items);
-		
-		/*films && films.map(async (film, index) => {
-			const response = await axios.get(domain + filmUrl + film.id)
-			setFilm(response.data)
-			movieList.push(movie)
-		});*/
 	}
 
 	
@@ -52,12 +46,12 @@ function BoxOffices() {
 					<div className="film" key={index}>
 						<h3>Film {index + 1}</h3>
 						<h2>{film.title}</h2>
-
+						<img src={film.image} alt="Affiche"	/>
 						<div className="details">
-						<p>👨: {titles}</p>
-						<p>📖: {film.weekend} over the weekend</p>
-						<p>🏘️: {film.gross} total</p>
-						<p>⏰: {film.weeks} weeks in theatres</p>
+						<p>👨: {film.directors}</p>
+						<p>📖: {film.releaseState} {film.year}</p>
+						<p>⏰: {film.runtimeStr}</p>
+						<p>{film.plot}</p>
 						</div>
 					</div>
 					);

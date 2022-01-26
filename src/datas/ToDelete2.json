@@ -1,381 +1,941 @@
 {
-	"id": "tt10872600",
-	"title": "Spider-Man: No Way Home",
-	"originalTitle": "",
-	"fullTitle": "Spider-Man: No Way Home (2021)",
-	"type": "Movie",
-	"year": "2021",
-	"image": "https://imdb-api.com/images/original/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_Ratio0.6762_AL_.jpg",
-	"releaseDate": "2021-12-17",
-	"runtimeMins": "148",
-	"runtimeStr": "2h 28min",
-	"plot": "Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters the multiverse, bringing in monstrous villains that could destroy the world.",
-	"plotLocal": "",
-	"plotLocalIsRtl": false,
-	"awards": "Top rated movie #20 | 2 wins & 22 nominations",
-	"directors": "Jon Watts",
-	"directorList": [
+	"items": [
 		{
-			"id": "nm1218281",
-			"name": "Jon Watts"
+			"id": "tt11466222",
+			"title": "Jackass Forever",
+			"fullTitle": "Jackass Forever (2022)",
+			"year": "2022",
+			"releaseState": "February 4",
+			"image": "https://m.media-amazon.com/images/M/MV5BMjY3OTBlODktYzliNS00Y2VkLWJhZjktZDcwY2E2YzhmOThhXkEyXkFqcGdeQXVyOTg4MDMxODM@._V1_UY176_CR6,0,128,176_AL_.jpg",
+			"runtimeMins": "96",
+			"runtimeStr": "1h 36mins",
+			"plot": "After 11 years, the Jackass crew is back for their final crusade.",
+			"contentRating": "R",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Documentary, Action, Comedy",
+			"genreList": [
+				{
+					"key": "Documentary",
+					"value": "Documentary"
+				},
+				{
+					"key": "Action",
+					"value": "Action"
+				},
+				{
+					"key": "Comedy",
+					"value": "Comedy"
+				}
+			],
+			"directors": "Jeff Tremaine",
+			"directorList": [
+				{
+					"id": "nm0871860",
+					"name": "Jeff Tremaine"
+				}
+			],
+			"stars": "Johnny Knoxville, Steve-O, Chris Pontius, Machine Gun Kelly",
+			"starList": [
+				{
+					"id": "nm0424216",
+					"name": "Johnny Knoxville"
+				},
+				{
+					"id": "nm0828177",
+					"name": "Steve-O"
+				},
+				{
+					"id": "nm0690686",
+					"name": "Chris Pontius"
+				},
+				{
+					"id": "nm0446622",
+					"name": "Machine Gun Kelly"
+				}
+			]
+		},
+		{
+			"id": "tt7144666",
+			"title": "The Black Phone",
+			"fullTitle": "The Black Phone (2021)",
+			"year": "2021",
+			"releaseState": "February 4",
+			"image": "https://m.media-amazon.com/images/M/MV5BOWVmNTBiYTUtZWQ3Yi00ZDlhLTgyYjUtNzBhZjM3YjRiNGRkXkEyXkFqcGdeQXVyNzYyOTM1ODI@._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "102",
+			"runtimeStr": "1h 42mins",
+			"plot": "After being abducted by a child killer and locked in a soundproof basement, a 13-year-old boy starts receiving calls on a disconnected phone from the killer's previous victims.",
+			"contentRating": "R",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "79",
+			"genres": "Horror",
+			"genreList": [
+				{
+					"key": "Horror",
+					"value": "Horror"
+				}
+			],
+			"directors": "Scott Derrickson",
+			"directorList": [
+				{
+					"id": "nm0220600",
+					"name": "Scott Derrickson"
+				}
+			],
+			"stars": "Ethan Hawke, Jeremy Davies, James Ransone, Madeleine McGraw",
+			"starList": [
+				{
+					"id": "nm0000160",
+					"name": "Ethan Hawke"
+				},
+				{
+					"id": "nm0001111",
+					"name": "Jeremy Davies"
+				},
+				{
+					"id": "nm0710447",
+					"name": "James Ransone"
+				},
+				{
+					"id": "nm6421259",
+					"name": "Madeleine McGraw"
+				}
+			]
+		},
+		{
+			"id": "tt5834426",
+			"title": "Moonfall",
+			"fullTitle": "Moonfall (2022)",
+			"year": "2022",
+			"releaseState": "February 4",
+			"image": "https://m.media-amazon.com/images/M/MV5BZjk0OWZiN2ItNmQ2YS00NTJmLTg0MjItNzM4NzBkMWM1ZTRlXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_UX128_CR0,2,128,176_AL_.jpg",
+			"runtimeMins": "120",
+			"runtimeStr": "2h 0mins",
+			"plot": "In Moonfall, a mysterious force knocks the Moon from its orbit around Earth and sends it hurdling on a collision course with life as we know it. With mere weeks before impact and the world on the brink of annihilation, NASA executive and former astronaut Jo Fowler is convinced she has the key to saving us all - but only one astronaut from her past, Brian Harper and a conspiracy theorist K.C. Houseman believe her. These unlikely heroes will mount an impossible last-ditch mission into space, leaving behind everyone they love, only to find that they might have prepared for the wrong mission.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Action, Adventure, Fantasy, Sci-Fi",
+			"genreList": [
+				{
+					"key": "Action",
+					"value": "Action"
+				},
+				{
+					"key": "Adventure",
+					"value": "Adventure"
+				},
+				{
+					"key": "Fantasy",
+					"value": "Fantasy"
+				},
+				{
+					"key": "Sci-Fi",
+					"value": "Sci-Fi"
+				}
+			],
+			"directors": "Roland Emmerich",
+			"directorList": [
+				{
+					"id": "nm0000386",
+					"name": "Roland Emmerich"
+				}
+			],
+			"stars": "Halle Berry, Patrick Wilson, John Bradley, Michael Peña",
+			"starList": [
+				{
+					"id": "nm0000932",
+					"name": "Halle Berry"
+				},
+				{
+					"id": "nm0933940",
+					"name": "Patrick Wilson"
+				},
+				{
+					"id": "nm4263213",
+					"name": "John Bradley"
+				},
+				{
+					"id": "nm0671567",
+					"name": "Michael Peña"
+				}
+			]
+		},
+		{
+			"id": "tt7657566",
+			"title": "Death on the Nile",
+			"fullTitle": "Death on the Nile (2022)",
+			"year": "2022",
+			"releaseState": "February 11",
+			"image": "https://m.media-amazon.com/images/M/MV5BNjI4ZTQ1OTYtNTI0Yi00M2EyLThiNjMtMzk1MmZlOWMyMDQwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "127",
+			"runtimeStr": "2h 7mins",
+			"plot": "While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Crime, Drama, Mystery",
+			"genreList": [
+				{
+					"key": "Crime",
+					"value": "Crime"
+				},
+				{
+					"key": "Drama",
+					"value": "Drama"
+				},
+				{
+					"key": "Mystery",
+					"value": "Mystery"
+				}
+			],
+			"directors": "Kenneth Branagh",
+			"directorList": [
+				{
+					"id": "nm0000110",
+					"name": "Kenneth Branagh"
+				}
+			],
+			"stars": "Kenneth Branagh, Gal Gadot, Tom Bateman, Rose Leslie",
+			"starList": [
+				{
+					"id": "nm0000110",
+					"name": "Kenneth Branagh"
+				},
+				{
+					"id": "nm2933757",
+					"name": "Gal Gadot"
+				},
+				{
+					"id": "nm5290643",
+					"name": "Tom Bateman"
+				},
+				{
+					"id": "nm3310211",
+					"name": "Rose Leslie"
+				}
+			]
+		},
+		{
+			"id": "tt14060094",
+			"title": "Blacklight",
+			"fullTitle": "Blacklight (2022)",
+			"year": "2022",
+			"releaseState": "February 11",
+			"image": "https://m.media-amazon.com/images/M/MV5BY2ViYmNhNzEtZDJhNS00YzM4LTkzZWItZDJiNzc5ZDExOWZmXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "108",
+			"runtimeStr": "1h 48mins",
+			"plot": "Travis Block is a government operative coming to terms with his shadowy past. When he discovers a plot targeting U.S. citizens, Block finds himself in the crosshairs of the FBI director he once helped protect.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Action, Thriller",
+			"genreList": [
+				{
+					"key": "Action",
+					"value": "Action"
+				},
+				{
+					"key": "Thriller",
+					"value": "Thriller"
+				}
+			],
+			"directors": "Mark Williams",
+			"directorList": [
+				{
+					"id": "nm0931251",
+					"name": "Mark Williams"
+				}
+			],
+			"stars": "Liam Neeson, Aidan Quinn, Taylor John Smith, Emmy Raver-Lampman",
+			"starList": [
+				{
+					"id": "nm0000553",
+					"name": "Liam Neeson"
+				},
+				{
+					"id": "nm0001644",
+					"name": "Aidan Quinn"
+				},
+				{
+					"id": "nm4973896",
+					"name": "Taylor John Smith"
+				},
+				{
+					"id": "nm8287501",
+					"name": "Emmy Raver-Lampman"
+				}
+			]
+		},
+		{
+			"id": "tt15248702",
+			"title": "Catwoman: Hunted",
+			"fullTitle": "Catwoman: Hunted (2022)",
+			"year": "2022",
+			"releaseState": "February 11",
+			"image": "https://m.media-amazon.com/images/M/MV5BOGJkNGUzM2YtNzMzOS00Yjg4LWIyZWMtMzc4OGJhMDVmMGUyXkEyXkFqcGdeQXVyMTEyNzgwMDUw._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "",
+			"runtimeStr": "",
+			"plot": "Follows Catwoman in an attempt to steal a priceless jewel. This puts her squarely in the crosshairs of both a powerful consortium of villains, Interpol and Batwoman.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Animation, Action, Sci-Fi",
+			"genreList": [
+				{
+					"key": "Animation",
+					"value": "Animation"
+				},
+				{
+					"key": "Action",
+					"value": "Action"
+				},
+				{
+					"key": "Sci-Fi",
+					"value": "Sci-Fi"
+				}
+			],
+			"directors": "Shinsuke Terasawa",
+			"directorList": [
+				{
+					"id": "nm0855424",
+					"name": "Shinsuke Terasawa"
+				}
+			],
+			"stars": "Stephanie Beatriz, Kelly Hu, Lauren Cohan, Jonathan Banks",
+			"starList": [
+				{
+					"id": "nm3715867",
+					"name": "Stephanie Beatriz"
+				},
+				{
+					"id": "nm0005026",
+					"name": "Kelly Hu"
+				},
+				{
+					"id": "nm1659348",
+					"name": "Lauren Cohan"
+				},
+				{
+					"id": "nm0052186",
+					"name": "Jonathan Banks"
+				}
+			]
+		},
+		{
+			"id": "tt10223460",
+			"title": "Marry Me",
+			"fullTitle": "Marry Me (2022)",
+			"year": "2022",
+			"releaseState": "February 11",
+			"image": "https://m.media-amazon.com/images/M/MV5BMjczZjI2M2UtOGMwOS00YWFhLTg0OTYtZDY5ZWIwNjhlOWI2XkEyXkFqcGdeQXVyMTQzNTA5MzYz._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "112",
+			"runtimeStr": "1h 52mins",
+			"plot": "Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she decides to marry Charlie, a stranger in the crowd, instead.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Comedy, Music, Romance",
+			"genreList": [
+				{
+					"key": "Comedy",
+					"value": "Comedy"
+				},
+				{
+					"key": "Music",
+					"value": "Music"
+				},
+				{
+					"key": "Romance",
+					"value": "Romance"
+				}
+			],
+			"directors": "Kat Coiro",
+			"directorList": [
+				{
+					"id": "nm0192478",
+					"name": "Kat Coiro"
+				}
+			],
+			"stars": "Jennifer Lopez, Utkarsh Ambudkar, Owen Wilson, John Bradley",
+			"starList": [
+				{
+					"id": "nm0000182",
+					"name": "Jennifer Lopez"
+				},
+				{
+					"id": "nm2064295",
+					"name": "Utkarsh Ambudkar"
+				},
+				{
+					"id": "nm0005562",
+					"name": "Owen Wilson"
+				},
+				{
+					"id": "nm4263213",
+					"name": "John Bradley"
+				}
+			]
+		},
+		{
+			"id": "tt2263648",
+			"title": "What About Love",
+			"fullTitle": "What About Love (2023)",
+			"year": "2023",
+			"releaseState": "February 11",
+			"image": "https://m.media-amazon.com/images/M/MV5BMGFjNTQwZDUtYzM2Mi00OGVjLThlZTYtZGRiZWJlNDgzNWZjXkEyXkFqcGdeQXVyODk4Mjg4MzY@._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "114",
+			"runtimeStr": "1h 54mins",
+			"plot": "Two young lovers change the lives of their parents forever when the parents learn from the joyful experience of their kids, and allow themselves to again find their love.",
+			"contentRating": "",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Drama, Romance",
+			"genreList": [
+				{
+					"key": "Drama",
+					"value": "Drama"
+				},
+				{
+					"key": "Romance",
+					"value": "Romance"
+				}
+			],
+			"directors": "Klaus Menzel",
+			"directorList": [
+				{
+					"id": "nm0579956",
+					"name": "Klaus Menzel"
+				}
+			],
+			"stars": "Sharon Stone, Andy Garcia, Rosabell Laurenti Sellers, Marielle Jaffe",
+			"starList": [
+				{
+					"id": "nm0000232",
+					"name": "Sharon Stone"
+				},
+				{
+					"id": "nm0000412",
+					"name": "Andy Garcia"
+				},
+				{
+					"id": "nm3065809",
+					"name": "Rosabell Laurenti Sellers"
+				},
+				{
+					"id": "nm3404718",
+					"name": "Marielle Jaffe"
+				}
+			]
+		},
+		{
+			"id": "tt9271672",
+			"title": "The Devil's Light",
+			"fullTitle": "The Devil's Light (2022)",
+			"year": "2022",
+			"releaseState": "February 11",
+			"image": "https://imdb-api.com/images/128x176/nopicture.jpg",
+			"runtimeMins": "93",
+			"runtimeStr": "1h 33mins",
+			"plot": "A nun prepares to perform an exorcism and comes face to face with a demonic force with mysterious ties to her past.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Horror, Thriller",
+			"genreList": [
+				{
+					"key": "Horror",
+					"value": "Horror"
+				},
+				{
+					"key": "Thriller",
+					"value": "Thriller"
+				}
+			],
+			"directors": "Daniel Stamm",
+			"directorList": [
+				{
+					"id": "nm0821844",
+					"name": "Daniel Stamm"
+				}
+			],
+			"stars": "Virginia Madsen, Nicholas Ralph, Christian Navarro, Colin Salmon",
+			"starList": [
+				{
+					"id": "nm0000515",
+					"name": "Virginia Madsen"
+				},
+				{
+					"id": "nm11013770",
+					"name": "Nicholas Ralph"
+				},
+				{
+					"id": "nm2111303",
+					"name": "Christian Navarro"
+				},
+				{
+					"id": "nm0758760",
+					"name": "Colin Salmon"
+				}
+			]
+		},
+		{
+			"id": "tt10473036",
+			"title": "The Amazing Maurice",
+			"fullTitle": "The Amazing Maurice",
+			"year": "",
+			"releaseState": "February 11",
+			"image": "https://m.media-amazon.com/images/M/MV5BNWEyYzc2YjItYzY4Ni00ZTY2LWJjYTItMjJiYTE1MWNkZTU4XkEyXkFqcGdeQXVyODUwMzI1NTI@._V1_UX128_CR0,1,128,176_AL_.jpg",
+			"runtimeMins": "84",
+			"runtimeStr": "1h 24mins",
+			"plot": "This story follows Maurice, a streetwise cat, who has the perfect money-making scam. He finds a dumb-looking kid who plays a pipe and has his very own horde of rats, who are strangely literate.",
+			"contentRating": "",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Animation, Family",
+			"genreList": [
+				{
+					"key": "Animation",
+					"value": "Animation"
+				},
+				{
+					"key": "Family",
+					"value": "Family"
+				}
+			],
+			"directors": "Toby Genkel, Florian Westermann",
+			"directorList": [
+				{
+					"id": "nm0312881",
+					"name": "Toby Genkel"
+				},
+				{
+					"id": "nm3154064",
+					"name": "Florian Westermann"
+				}
+			],
+			"stars": "Hugh Laurie, Emilia Clarke, David Thewlis, Himesh Patel",
+			"starList": [
+				{
+					"id": "nm0491402",
+					"name": "Hugh Laurie"
+				},
+				{
+					"id": "nm3592338",
+					"name": "Emilia Clarke"
+				},
+				{
+					"id": "nm0000667",
+					"name": "David Thewlis"
+				},
+				{
+					"id": "nm2797744",
+					"name": "Himesh Patel"
+				}
+			]
+		},
+		{
+			"id": "tt1464335",
+			"title": "Uncharted",
+			"fullTitle": "Uncharted (2022)",
+			"year": "2022",
+			"releaseState": "February 18",
+			"image": "https://m.media-amazon.com/images/M/MV5BMzBiZjlkYzItN2QyNS00MzYwLWJmZTAtZWEwOTBkMTNmZjlhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "",
+			"runtimeStr": "",
+			"plot": "The story is a prequel to the games, starring Holland as a younger Drake, showing us details of how he came to meet and befriend Sully.",
+			"contentRating": "",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Action, Adventure",
+			"genreList": [
+				{
+					"key": "Action",
+					"value": "Action"
+				},
+				{
+					"key": "Adventure",
+					"value": "Adventure"
+				}
+			],
+			"directors": "Ruben Fleischer",
+			"directorList": [
+				{
+					"id": "nm0281508",
+					"name": "Ruben Fleischer"
+				}
+			],
+			"stars": "Tom Holland, Mark Wahlberg, Antonio Banderas, Sophia Ali",
+			"starList": [
+				{
+					"id": "nm4043618",
+					"name": "Tom Holland"
+				},
+				{
+					"id": "nm0000242",
+					"name": "Mark Wahlberg"
+				},
+				{
+					"id": "nm0000104",
+					"name": "Antonio Banderas"
+				},
+				{
+					"id": "nm1496115",
+					"name": "Sophia Ali"
+				}
+			]
+		},
+		{
+			"id": "tt8337158",
+			"title": "Rumble",
+			"fullTitle": "Rumble (2021)",
+			"year": "2021",
+			"releaseState": "February 18",
+			"image": "https://m.media-amazon.com/images/M/MV5BOTdhNDM5YmEtOWFhZS00NjQwLTg3ZTQtMGI2OTNhZjQ2OGQxXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "104",
+			"runtimeStr": "1h 44mins",
+			"plot": "In a world where monster wrestling is a global sport and monsters are superstar athletes, teenage Winnie seeks to follow in her father's footsteps by coaching a loveable underdog monster into a champion.",
+			"contentRating": "PG",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "48",
+			"genres": "Animation, Comedy, Family, Fantasy, Sport",
+			"genreList": [
+				{
+					"key": "Animation",
+					"value": "Animation"
+				},
+				{
+					"key": "Comedy",
+					"value": "Comedy"
+				},
+				{
+					"key": "Family",
+					"value": "Family"
+				},
+				{
+					"key": "Fantasy",
+					"value": "Fantasy"
+				},
+				{
+					"key": "Sport",
+					"value": "Sport"
+				}
+			],
+			"directors": "Hamish Grieve",
+			"directorList": [
+				{
+					"id": "nm2842319",
+					"name": "Hamish Grieve"
+				}
+			],
+			"stars": "Geraldine Viswanathan, Will Arnett, Stephen A. Smith, Terry Crews",
+			"starList": [
+				{
+					"id": "nm6543093",
+					"name": "Geraldine Viswanathan"
+				},
+				{
+					"id": "nm0004715",
+					"name": "Will Arnett"
+				},
+				{
+					"id": "nm1946567",
+					"name": "Stephen A. Smith"
+				},
+				{
+					"id": "nm0187719",
+					"name": "Terry Crews"
+				}
+			]
+		},
+		{
+			"id": "tt4998632",
+			"title": "Ambulance",
+			"fullTitle": "Ambulance (2022)",
+			"year": "2022",
+			"releaseState": "February 18",
+			"image": "https://m.media-amazon.com/images/M/MV5BNWZlZDYzYzctOTg0NC00OWUyLWI3NzgtMWViOTQ0MWIyNWJhXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "",
+			"runtimeStr": "",
+			"plot": "Two robbers steal an ambulance after their heist goes awry.",
+			"contentRating": "R",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Action, Crime, Drama, Thriller",
+			"genreList": [
+				{
+					"key": "Action",
+					"value": "Action"
+				},
+				{
+					"key": "Crime",
+					"value": "Crime"
+				},
+				{
+					"key": "Drama",
+					"value": "Drama"
+				},
+				{
+					"key": "Thriller",
+					"value": "Thriller"
+				}
+			],
+			"directors": "Michael Bay",
+			"directorList": [
+				{
+					"id": "nm0000881",
+					"name": "Michael Bay"
+				}
+			],
+			"stars": "Jake Gyllenhaal, Eiza González, Devan Chandler Long, Yahya Abdul-Mateen II",
+			"starList": [
+				{
+					"id": "nm0350453",
+					"name": "Jake Gyllenhaal"
+				},
+				{
+					"id": "nm2555462",
+					"name": "Eiza González"
+				},
+				{
+					"id": "nm4231435",
+					"name": "Devan Chandler Long"
+				},
+				{
+					"id": "nm5584344",
+					"name": "Yahya Abdul-Mateen II"
+				}
+			]
+		},
+		{
+			"id": "tt11252248",
+			"title": "Dog",
+			"fullTitle": "Dog (2022)",
+			"year": "2022",
+			"releaseState": "February 18",
+			"image": "https://m.media-amazon.com/images/M/MV5BOTllYmYwODEtNGFhNS00ZmQ0LTljOWMtZjUxNzVhNDFhYzQzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "90",
+			"runtimeStr": "1h 30mins",
+			"plot": "Briggs who, alongside his companion Lulu, a Belgian Malinois haul ass down the Pacific Coast in time to catch their best friend's and handler's funeral. One of them has a week to live, the other lives like every day is his last.",
+			"contentRating": "PG-13",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Comedy",
+			"genreList": [
+				{
+					"key": "Comedy",
+					"value": "Comedy"
+				}
+			],
+			"directors": "Reid Carolin, Channing Tatum",
+			"directorList": [
+				{
+					"id": "nm1730221",
+					"name": "Reid Carolin"
+				},
+				{
+					"id": "nm1475594",
+					"name": "Channing Tatum"
+				}
+			],
+			"stars": "Channing Tatum, Q'orianka Kilcher, Kevin Nash, Jane Adams",
+			"starList": [
+				{
+					"id": "nm1475594",
+					"name": "Channing Tatum"
+				},
+				{
+					"id": "nm0452963",
+					"name": "Q'orianka Kilcher"
+				},
+				{
+					"id": "nm0621760",
+					"name": "Kevin Nash"
+				},
+				{
+					"id": "nm0011038",
+					"name": "Jane Adams"
+				}
+			]
+		},
+		{
+			"id": "tt10503736",
+			"title": "The Ghosts of Borley Rectory",
+			"fullTitle": "The Ghosts of Borley Rectory (2021)",
+			"year": "2021",
+			"releaseState": "February 18",
+			"image": "https://m.media-amazon.com/images/M/MV5BY2E2ZWE3ODItZTA1My00ODYyLThhZWMtNTZiYzVkMmIxNjQ0XkEyXkFqcGdeQXVyMzU5NzU5OQ@@._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "80",
+			"runtimeStr": "1h 20mins",
+			"plot": "Harry Price investigates the ghosts of Borley Rectory during his stay there.",
+			"contentRating": "",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Drama, Horror, Mystery, Thriller",
+			"genreList": [
+				{
+					"key": "Drama",
+					"value": "Drama"
+				},
+				{
+					"key": "Horror",
+					"value": "Horror"
+				},
+				{
+					"key": "Mystery",
+					"value": "Mystery"
+				},
+				{
+					"key": "Thriller",
+					"value": "Thriller"
+				}
+			],
+			"directors": "Steven M. Smith",
+			"directorList": [
+				{
+					"id": "nm1953143",
+					"name": "Steven M. Smith"
+				}
+			],
+			"stars": "Toby Wynn-Davies, Julian Sands, Colin Baker, Christopher Ellison",
+			"starList": [
+				{
+					"id": "nm8231459",
+					"name": "Toby Wynn-Davies"
+				},
+				{
+					"id": "nm0001696",
+					"name": "Julian Sands"
+				},
+				{
+					"id": "nm0048346",
+					"name": "Colin Baker"
+				},
+				{
+					"id": "nm0255177",
+					"name": "Christopher Ellison"
+				}
+			]
+		},
+		{
+			"id": "tt14114802",
+			"title": "The Outfit",
+			"fullTitle": "The Outfit (2022)",
+			"year": "2022",
+			"releaseState": "February 25",
+			"image": "https://m.media-amazon.com/images/M/MV5BNjVlOTFhMDctYzcwOS00MDdjLWJlOTItZjlkY2Y1NWJhMTM3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UY176_CR6,0,128,176_AL_.jpg",
+			"runtimeMins": "105",
+			"runtimeStr": "1h 45mins",
+			"plot": "An expert tailor must outwit a dangerous group of mobsters in order to survive a fateful night.",
+			"contentRating": "",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "",
+			"genres": "Crime, Drama",
+			"genreList": [
+				{
+					"key": "Crime",
+					"value": "Crime"
+				},
+				{
+					"key": "Drama",
+					"value": "Drama"
+				}
+			],
+			"directors": "Graham Moore",
+			"directorList": [
+				{
+					"id": "nm2441699",
+					"name": "Graham Moore"
+				}
+			],
+			"stars": "Mark Rylance, Zoey Deutch, Dylan O'Brien, Johnny Flynn",
+			"starList": [
+				{
+					"id": "nm0753314",
+					"name": "Mark Rylance"
+				},
+				{
+					"id": "nm3614913",
+					"name": "Zoey Deutch"
+				},
+				{
+					"id": "nm3729721",
+					"name": "Dylan O'Brien"
+				},
+				{
+					"id": "nm1926865",
+					"name": "Johnny Flynn"
+				}
+			]
+		},
+		{
+			"id": "tt12229370",
+			"title": "Mothering Sunday",
+			"fullTitle": "Mothering Sunday (2021)",
+			"year": "2021",
+			"releaseState": "February 25",
+			"image": "https://m.media-amazon.com/images/M/MV5BNzM0YjJlZWItNzAwNC00NTY0LTlkZjItZjljMTg2NmIxZDkyXkEyXkFqcGdeQXVyMTQyODg5MjQw._V1_UX128_CR0,4,128,176_AL_.jpg",
+			"runtimeMins": "104",
+			"runtimeStr": "1h 44mins",
+			"plot": "A maid living in post-World War I England secretly plans to meet with the man she loves before he leaves to marry another woman.",
+			"contentRating": "R",
+			"imDbRating": "",
+			"imDbRatingCount": "",
+			"metacriticRating": "67",
+			"genres": "Drama, Romance",
+			"genreList": [
+				{
+					"key": "Drama",
+					"value": "Drama"
+				},
+				{
+					"key": "Romance",
+					"value": "Romance"
+				}
+			],
+			"directors": "Eva Husson",
+			"directorList": [
+				{
+					"id": "nm0404067",
+					"name": "Eva Husson"
+				}
+			],
+			"stars": "Odessa Young, Josh O'Connor, Colin Firth, Olivia Colman",
+			"starList": [
+				{
+					"id": "nm3747611",
+					"name": "Odessa Young"
+				},
+				{
+					"id": "nm4853066",
+					"name": "Josh O'Connor"
+				},
+				{
+					"id": "nm0000147",
+					"name": "Colin Firth"
+				},
+				{
+					"id": "nm1469236",
+					"name": "Olivia Colman"
+				}
+			]
 		}
 	],
-	"writers": "Chris McKenna, Erik Sommers, Stan Lee",
-	"writerList": [
-		{
-			"id": "nm0571344",
-			"name": "Chris McKenna"
-		},
-		{
-			"id": "nm1273099",
-			"name": "Erik Sommers"
-		},
-		{
-			"id": "nm0498278",
-			"name": "Stan Lee"
-		}
-	],
-	"stars": "Tom Holland, Zendaya, Benedict Cumberbatch",
-	"starList": [
-		{
-			"id": "nm4043618",
-			"name": "Tom Holland"
-		},
-		{
-			"id": "nm3918035",
-			"name": "Zendaya"
-		},
-		{
-			"id": "nm1212722",
-			"name": "Benedict Cumberbatch"
-		}
-	],
-	"actorList": [
-		{
-			"id": "nm4043618",
-			"image": "https://imdb-api.com/images/original/MV5BNzZiNTEyNTItYjNhMS00YjI2LWIwMWQtZmYwYTRlNjMyZTJjXkEyXkFqcGdeQXVyMTExNzQzMDE0._V1_Ratio1.0000_AL_.jpg",
-			"name": "Tom Holland",
-			"asCharacter": "Peter Parkeras Peter Parker…"
-		},
-		{
-			"id": "nm3918035",
-			"image": "https://imdb-api.com/images/original/MV5BMjAxZTk4NDAtYjI3Mi00OTk3LTg0NDEtNWFlNzE5NDM5MWM1XkEyXkFqcGdeQXVyOTI3MjYwOQ@@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Zendaya",
-			"asCharacter": "MJas MJ"
-		},
-		{
-			"id": "nm1212722",
-			"image": "https://imdb-api.com/images/original/MV5BOTc0ZGQwMTAtNGM5Zi00OGZjLTlmMWMtZDNjN2M3YjNmMmUyXkEyXkFqcGdeQXVyMjI2MDYzNDE@._V1_Ratio1.0143_AL_.jpg",
-			"name": "Benedict Cumberbatch",
-			"asCharacter": "Doctor Strangeas Doctor Strange"
-		},
-		{
-			"id": "nm8188622",
-			"image": "https://imdb-api.com/images/original/MV5BMTJmMDA1ODUtYWI0NS00MjA4LWFiZjgtOTk1OGQ3MDQ4Mjg4XkEyXkFqcGdeQXVyMTA1MTQ2ODk1._V1_Ratio1.4857_AL_.jpg",
-			"name": "Jacob Batalon",
-			"asCharacter": "Ned Leedsas Ned Leeds"
-		},
-		{
-			"id": "nm0269463",
-			"image": "https://imdb-api.com/images/original/MV5BNjcwNzg4MjktNDNlMC00M2U1LWJmMjgtZTVkMmI4MDI2MTVmXkEyXkFqcGdeQXVyMjI4MDI0NTM@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Jon Favreau",
-			"asCharacter": "Happy Hoganas Happy Hogan"
-		},
-		{
-			"id": "nm0004937",
-			"image": "https://imdb-api.com/images/original/MV5BMTkyNjY1NDg3NF5BMl5BanBnXkFtZTgwNjA2MTg0MzE@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Jamie Foxx",
-			"asCharacter": "Max Dillonas Max Dillon…"
-		},
-		{
-			"id": "nm0000353",
-			"image": "https://imdb-api.com/images/original/MV5BOWU4MTI2OTctODQ1ZS00MGM1LWJkM2EtODE3MGNkNmIyZDEwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Willem Dafoe",
-			"asCharacter": "Norman Osbornas Norman Osborn…"
-		},
-		{
-			"id": "nm0000547",
-			"image": "https://imdb-api.com/images/original/MV5BMTEwNTgzNzgxNzNeQTJeQWpwZ15BbWU3MDQ5NzU1NjM@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Alfred Molina",
-			"asCharacter": "Dr. Otto Octaviusas Dr. Otto Octavius…"
-		},
-		{
-			"id": "nm0938950",
-			"image": "https://imdb-api.com/images/original/MV5BNTNlMjg3NWQtZmJlNS00NGU2LWI5NWMtZDk2MGI1YTI4YTVkXkEyXkFqcGdeQXVyMTgyMzY5MTk@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Benedict Wong",
-			"asCharacter": "Wongas Wong"
-		},
-		{
-			"id": "nm1727825",
-			"image": "https://imdb-api.com/images/original/MV5BMjgyNGIyZmMtMTFlYy00OWE5LWE2Y2QtYjhhOGU0NzM4YzliXkEyXkFqcGdeQXVyMzk0NzA4MDc@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Tony Revolori",
-			"asCharacter": "Flash Thompsonas Flash Thompson"
-		},
-		{
-			"id": "nm0000673",
-			"image": "https://imdb-api.com/images/original/MV5BMTUwMjA3OTc3N15BMl5BanBnXkFtZTcwNTA1MzY1Mw@@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Marisa Tomei",
-			"asCharacter": "May Parkeras May Parker"
-		},
-		{
-			"id": "nm1940449",
-			"image": "https://imdb-api.com/images/original/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Andrew Garfield",
-			"asCharacter": "Peter Parkeras Peter Parker…"
-		},
-		{
-			"id": "nm0001497",
-			"image": "https://imdb-api.com/images/original/MV5BMTYwMTI5NTM2OF5BMl5BanBnXkFtZTcwODk3MDQ2Mg@@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Tobey Maguire",
-			"asCharacter": "Peter Parkeras Peter Parker…"
-		},
-		{
-			"id": "nm3886028",
-			"image": "https://imdb-api.com/images/original/MV5BMzhkMTczYWEtOThmYS00MDEyLTgzZjAtODE5YTUwMmJiMjAzXkEyXkFqcGdeQXVyOTE0NjgwMjY@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Angourie Rice",
-			"asCharacter": "Betty Brantas Betty Brant"
-		},
-		{
-			"id": "nm1573892",
-			"image": "https://imdb-api.com/images/original/MV5BNWMwODM2ZmMtZjdkNi00MDFhLTkxYzItMDQzYTkzZDNmNmI0XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Arian Moayed",
-			"asCharacter": "Agent Clearyas Agent Cleary"
-		},
-		{
-			"id": "nm0628420",
-			"image": "https://imdb-api.com/images/original/MV5BYmVmNjUyNmUtNTIwZC00NGZjLWI5YWEtYmI3YjM3MzhmZWNhXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_Ratio1.1000_AL_.jpg",
-			"name": "Paula Newsome",
-			"asCharacter": "MIT Assistant Vice Chancelloras MIT Assistant Vice Chancellor"
-		},
-		{
-			"id": "nm2868110",
-			"image": "https://imdb-api.com/images/original/MV5BMjI2NzIwNTQ1N15BMl5BanBnXkFtZTgwMTQzNTc4NDE@._V1_Ratio1.0000_AL_.jpg",
-			"name": "Hannibal Buress",
-			"asCharacter": "Coach Wilsonas Coach Wilson"
-		},
-		{
-			"id": "nm0771414",
-			"image": "https://imdb-api.com/images/original/MV5BYmQ3NDdjNzMtZWIyMC00OWRhLTgzNDYtZDlkMmE4YWY5YTEyXkEyXkFqcGdeQXVyNjc5Mjg0NjU@._V1_Ratio1.5000_AL_.jpg",
-			"name": "Martin Starr",
-			"asCharacter": "Mr. Harringtonas Mr. Harrington"
-		}
-	],
-	"fullCast": null,
-	"genres": "Action, Adventure, Fantasy",
-	"genreList": [
-		{
-			"key": "Action",
-			"value": "Action"
-		},
-		{
-			"key": "Adventure",
-			"value": "Adventure"
-		},
-		{
-			"key": "Fantasy",
-			"value": "Fantasy"
-		}
-	],
-	"companies": "Columbia Pictures, Pascal Pictures, Marvel Studios",
-	"companyList": [
-		{
-			"id": "co0050868",
-			"name": "Columbia Pictures"
-		},
-		{
-			"id": "co0532247",
-			"name": "Pascal Pictures"
-		},
-		{
-			"id": "co0051941",
-			"name": "Marvel Studios"
-		}
-	],
-	"countries": "USA",
-	"countryList": [
-		{
-			"key": "USA",
-			"value": "USA"
-		}
-	],
-	"languages": "English",
-	"languageList": [
-		{
-			"key": "English",
-			"value": "English"
-		}
-	],
-	"contentRating": "PG",
-	"imDbRating": "8.8",
-	"imDbRatingVotes": "389170",
-	"metacriticRating": "71",
-	"ratings": null,
-	"wikipedia": null,
-	"posters": null,
-	"images": null,
-	"trailer": null,
-	"boxOffice": {
-		"budget": "$200,000,000 (estimated)",
-		"openingWeekendUSA": "$260,138,569",
-		"grossUSA": "$683,074,074",
-		"cumulativeWorldwideGross": "$1,551,716,780"
-	},
-	"tagline": "The Multiverse Unleashed.",
-	"keywords": "multiverse,superhero,marvel cinematic universe,spider man character,villain",
-	"keywordList": [
-		"multiverse",
-		"superhero",
-		"marvel cinematic universe",
-		"spider man character",
-		"villain"
-	],
-	"similars": [
-		{
-			"id": "tt6320628",
-			"title": "Spider-Man: Far from Home",
-			"fullTitle": "Spider-Man: Far from Home",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BMGZlNTY1ZWUtYTMzNC00ZjUyLWE0MjQtMTMxN2E3ODYxMWVmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "7.4"
-		},
-		{
-			"id": "tt2250912",
-			"title": "Spider-Man: Homecoming",
-			"fullTitle": "Spider-Man: Homecoming",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BNTk4ODQ1MzgzNl5BMl5BanBnXkFtZTgwMTMyMzM4MTI@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "7.4"
-		},
-		{
-			"id": "tt0145487",
-			"title": "Spider-Man",
-			"fullTitle": "Spider-Man",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "7.3"
-		},
-		{
-			"id": "tt0316654",
-			"title": "Spider-Man 2",
-			"fullTitle": "Spider-Man 2",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BMzY2ODk4NmUtOTVmNi00ZTdkLTlmOWYtMmE2OWVhNTU2OTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.7343_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "7.4"
-		},
-		{
-			"id": "tt0948470",
-			"title": "The Amazing Spider-Man",
-			"fullTitle": "The Amazing Spider-Man",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "6.9"
-		},
-		{
-			"id": "tt4154796",
-			"title": "Avengers: Endgame",
-			"fullTitle": "Avengers: Endgame",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "8.4"
-		},
-		{
-			"id": "tt0413300",
-			"title": "Spider-Man 3",
-			"fullTitle": "Spider-Man 3",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "6.2"
-		},
-		{
-			"id": "tt10160804",
-			"title": "Hawkeye",
-			"fullTitle": "Hawkeye",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BZGRjYjNmYmQtZTI4NS00ZGQwLTg1YzQtMzJkOWJmYTNkODJmXkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "7.7"
-		},
-		{
-			"id": "tt1872181",
-			"title": "The Amazing Spider-Man 2",
-			"fullTitle": "The Amazing Spider-Man 2",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "6.6"
-		},
-		{
-			"id": "tt9376612",
-			"title": "Shang-Chi and the Legend of the Ten Rings",
-			"fullTitle": "Shang-Chi and the Legend of the Ten Rings",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "7.5"
-		},
-		{
-			"id": "tt4154756",
-			"title": "Avengers: Infinity War",
-			"fullTitle": "Avengers: Infinity War",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "8.4"
-		},
-		{
-			"id": "tt10838180",
-			"title": "The Matrix Resurrections",
-			"fullTitle": "The Matrix Resurrections",
-			"year": "",
-			"image": "https://imdb-api.com/images/original/MV5BMGJkNDJlZWUtOGM1Ny00YjNkLThiM2QtY2ZjMzQxMTIxNWNmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6763_AL_.jpg",
-			"plot": "",
-			"directors": "",
-			"stars": "",
-			"genres": "",
-			"imDbRating": "5.7"
-		}
-	],
-	"tvSeriesInfo": null,
-	"tvEpisodeInfo": null,
-	"errorMessage": null
+	"errorMessage": ""
 }
