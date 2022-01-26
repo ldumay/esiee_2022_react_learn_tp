@@ -6,6 +6,16 @@ import Header from './Header'
 function RegisterCheckUser(props){
     const userInJson = "TOTO@TOTO.fr"
 
+    function Checkmail(){
+        if (props.inputEmail == userInJson){
+            console.log("Utilisateur existant");
+            //here call component register and change the URL
+        }
+        else {
+            console.log("Email non existant, bienvenue sur notre site!!!!!!!!");
+            //call component quiz and change the URL
+        }
+    }
     return (
         <div>
             <Header />
