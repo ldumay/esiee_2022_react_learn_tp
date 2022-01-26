@@ -1,8 +1,7 @@
 /**
  * Model of Film
  */
- class Film {
-
+class Film {
 	constructor(id, nom, imageUrl, genre, dateSortie, description, ratio) {
 		this.id = id;
 		this.nom = nom;
