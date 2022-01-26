@@ -1,30 +1,32 @@
+import ListeFilms from "./ListeFilms"
+
 /**
  * Model of User
  */
-function User(){
+class User {
+	constructor(id, nom, prenom, dateNaissance, mail) {
+		this.id = id
+		this.nom = nom
+		this.prenom = prenom
+		this.dateNaissance = dateNaissance
+		this.mail = mail
+		this.listFilms = new ListeFilms();
+	}
 
-    const id = null
-    const nom = null
-    const prenom = null
-    const dateNaissance = null
-    const mail = null
-    const listFilms = []
-    
-    /**
-     * Mail verification
-     */
-    function checkMail(mail){
-        console.log('Vérification du mail "'+mail+'".')
-    }
+	/**
+	 * Mail verification
+	 */
+	checkMail() {
+		console.log('Vérification du mail "' + this.mail + '".')
+	}
 
-    /**
-     * Calculate the age
-     */
-    function calculateAge(age){
-        today = new Date()
-        console.log('Age : '+today+'')
-        console.log('Age : '+age+'')
-    }
-
+	/**
+	 * Calculate the age
+	 */
+	calculateAge() {
+		let currentYear = new Date().getFullYear();
+		console.log('Age : ' + currentYear - this.dateNaissance.getFullYear);
+	}
 }
+
 export default User
