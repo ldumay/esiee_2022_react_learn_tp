@@ -1,15 +1,15 @@
 import React from 'react';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function BoxOffices() {
 
-	const[films, setFilms] = useState(null)
+	const[films, setFilms] = useState()
 	const domain = "https://imdb-api.com/en/API"
 	const boxOfficeUrl = "/BoxOffice/k_hiba3sak";
 	const filmUrl = "Title/k_hiba3sak/"
 
-	var newTab = []
+	var movieList = []
 	const[movie, setFilm] = useState()
 
 	const fetchData = async () => {
@@ -17,14 +17,12 @@ function BoxOffices() {
 
 		setFilms(response.data.items);
 		
-		films.map(async (film, index) => {
+		/*films && films.map(async (film, index) => {
 			const response = await axios.get(domain + filmUrl + film.id)
 			setFilm(response.data)
-			newTab.push(movie)
-		});
+			movieList.push(movie)
+		});*/
 	}
-
-
 
 	
 
@@ -33,16 +31,16 @@ function BoxOffices() {
 		<div className="BoxOffices">
 			<h1>Films that made it big</h1>
 			<h2>Fetch a list from an API and display it</h2>
-	
+  
 			{/* Fetch data from API */}
 			<div>
 				<button className="fetch-button" onClick={fetchData}>
 				Fetch Data
 				</button>
 			</div>
-  
+		
 		  	{/* Display data from API */}
-			<div className="films">
+			  <div className="films">
 				{films &&
 				films.map((film, index) => {
 					const id = film.id;
