@@ -1,31 +1,35 @@
 /**
  * Model of Film
  */
-function Film(){
+ class Film {
 
-    const id = null
-    const nom = null
-    const imageUrl = null
-    const genre = null
-    const dateSortie = null
-    const description = null
-    const ratio = null
-    
-    return(
-        <div id="{id-nom}" class="col-md-12">
-            <h3>#{id} - {nom}</h3>
-            <img
-                className="imageFilm"
-                alt="{id-nom}"
-                src={imageUrl}
-            />
-            <p>
-                Genre : {genre}
-                Date de sortie : {dateSortie}
-                Description : {description}
-                Ratio : {ratio}
-            </p>
-        </div>
-    )
+	constructor(id, nom, imageUrl, genre, dateSortie, description, ratio) {
+		this.id = id;
+		this.nom = nom;
+		this.imageUrl = imageUrl;
+		this.genre = genre;
+		this.dateSortie = dateSortie;
+		this.description = description;
+		this.ratio = ratio;
+	}
+
+	showFilm() {
+		return (
+			<div id="{id-nom}" class="col-md-12">
+				<h3>#{this.id} - {this.nom}</h3>
+				<img
+					className="imageFilm"
+					alt="{this.id - this.nom}"
+					src={this.imageUrl}
+				/>
+				<p>
+					Genre : {this.genre}
+					Date de sortie : {this.dateSortie}
+					Description : {this.description}
+					Ratio : {this.ratio}
+				</p>
+			</div>
+		)
+	}
 }
 export default Film
