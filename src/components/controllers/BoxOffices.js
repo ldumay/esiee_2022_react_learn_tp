@@ -3,27 +3,35 @@ import axios from 'axios';
 import { useState } from 'react';
 
 function BoxOffices() {
-	const[books, setFilms] = useState(null)
-	const url = "https://www.anapioficeandfire.com/api/books?pageSize=30";//"https://imdb-api.com/en/API/BoxOffice/k_hiba3sak";
+
+	const[films, setFilms] = useState(null)
+	const domain = "https://imdb-api.com/en/API"
+	const boxOfficeUrl = "/BoxOffice/k_hiba3sak";
+	const filmUrl = "Title/k_hiba3sak/"
+
+	var newTab = []
+	const[movie, setFilm] = useState()
 
 	const fetchData = async () => {
-		const response = await axios.get(url)
-	
-		setFilms(response.data) 
-	  }
+		const response = await axios.get(domain+boxOfficeUrl);
 
-	/*fetch(url)
-	.then((response) => response.json())
-	.then((responseJson) => {
-	  return responseJson.movies;
-	})
-	.catch((error) => {
-	  console.error(error);
-	});*/
+		setFilms(response.data.items);
+		
+		films.map(async (film, index) => {
+			const response = await axios.get(domain + filmUrl + film.id)
+			setFilm(response.data)
+			newTab.push(movie)
+		});
+	}
+
+
+
+	
+
 
 	return (
 		<div className="BoxOffices">
-			<h1>Game of Thrones Books</h1>
+			<h1>Films that made it big</h1>
 			<h2>Fetch a list from an API and display it</h2>
 	
 			{/* Fetch data from API */}
@@ -34,22 +42,24 @@ function BoxOffices() {
 			</div>
   
 		  	{/* Display data from API */}
-			<div className="books">
-				{books &&
-				books.map((book, index) => {
-					const cleanedDate = new Date(book.released).toDateString();
-					const authors = book.authors.join(', ');
+			<div className="films">
+				{films &&
+				films.map((film, index) => {
+					const id = film.id;
+					const rank = film.rank;
+					//const cleanedDate = new Date(film.released).toDateString();
+					const titles = film.title;
 
 					return (
-					<div className="book" key={index}>
-						<h3>Book {index + 1}</h3>
-						<h2>{book.name}</h2>
+					<div className="film" key={index}>
+						<h3>Film {index + 1}</h3>
+						<h2>{film.title}</h2>
 
 						<div className="details">
-						<p>👨: {authors}</p>
-						<p>📖: {book.numberOfPages} pages</p>
-						<p>🏘️: {book.country}</p>
-						<p>⏰: {cleanedDate}</p>
+						<p>👨: {titles}</p>
+						<p>📖: {film.weekend} over the weekend</p>
+						<p>🏘️: {film.gross} total</p>
+						<p>⏰: {film.weeks} weeks in theatres</p>
 						</div>
 					</div>
 					);
