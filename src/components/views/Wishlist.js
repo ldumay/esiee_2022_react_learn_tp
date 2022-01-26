@@ -1,31 +1,34 @@
-function Wishlist(currentUser) {
-	let filmList = currentUser.filmList;
+import Film from "../models/Film"
+import Films from "../views/Films"
 
-	filmList = [
+function Wishlist(currentUser) {
+	//let filmList = currentUser.filmList;
+
+	let filmList = [
 		{
 			id: 1,
 			nom: "Film",
 			imageUrl: "img.png",
 			genre: "action",
-			dateSortie: new Date(2022, 1, 26),
+			dateSortie: new Date(2022, 1, 26).toDateString(),
 			description: "description",
 			ratio: 15
 		},
 		{
-			id: 1,
+			id: 2,
 			nom: "Film",
 			imageUrl: "img.png",
 			genre: "action",
-			dateSortie: new Date(2022, 1, 26),
+			dateSortie: new Date(2022, 1, 26).toDateString(),
 			description: "description",
 			ratio: 25
 		},
 		{
-			id: 1,
+			id: 3,
 			nom: "Film",
 			imageUrl: "img.png",
 			genre: "action",
-			dateSortie: new Date(2022, 1, 26),
+			dateSortie: new Date(2022, 1, 26).toDateString(),
 			description: "description",
 			ratio: 35
 		},
@@ -36,10 +39,10 @@ function Wishlist(currentUser) {
 			<h1>Liste d'envies</h1>
 			{filmList.map((film) => (
 				<li key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
-					{film.nom}
-					{film.ratio}
+					<Films film={film} />
 				</li>
-			))}
+			)
+			)}
 		</div>
 	)
 }
