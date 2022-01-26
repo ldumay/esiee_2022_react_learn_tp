@@ -7,6 +7,7 @@ import Result from './components/views/Result';
 import Catalog from './components/views/Catalog';
 import FilmsInfos from './components/views/FilmsInfos';
 import Wishlist from './components/views/Wishlist';
+import Test from './components/views/Test';
 import { useState } from 'react';
 import NotFound from './components/views/NotFound';
 
@@ -16,6 +17,7 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
+				<Route path="/test" element={<Test />} />
 				<Route exact path="/register" element={<Register currentUser={currentUser} setUser={setUser} />} />
 				<Route exact path="/result" element={<Result />} />
 				<Route exact path="/catalog" element={<Catalog />} />
