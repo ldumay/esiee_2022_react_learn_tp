@@ -23,8 +23,8 @@ function Home(){
                     <ul>
                         <li><a className="App-link" href="/">Accueil</a></li>
                         <li><a className="App-link" href="/register">Insription</a></li>
-                        <li><a className="App-link" href="/result">Résultat</a></li>
                         <li><a className="App-link" href="/questions">Questionnaire</a></li>
+                        <li><a className="App-link" href="/result">Résultat</a></li>
                         <li><a className="App-link" href="/catalog">Liste des films</a></li>
                         <li><a className="App-link" href="/film-infos">Infos d'un liste</a></li>
                         <li><a className="App-link" href="/wishlist">Liste des envies</a></li>
