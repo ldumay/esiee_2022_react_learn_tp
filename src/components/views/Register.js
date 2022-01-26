@@ -2,6 +2,7 @@
 import { useState } from "react"
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { useNavigate } from "react-router-dom";
 
 function Register(props){
     const [inputFirstName,setFirstName]         = useState()
@@ -39,7 +40,7 @@ function Register(props){
                 const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (value.match(regEmail)){
                     props.setEmail(value)
-
+                    
                     console.log("good format")
                     console.log(props.inputEmail)
                 }
@@ -55,13 +56,15 @@ function Register(props){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    
+        
         console.log(`nom,       ${inputLastName}`,); 
         console.log(`prénom,    ${inputFirstName}`,);    
         console.log(`age,       ${inputAge}`,); 
         console.log(`tel,       ${inputPhone_number}`,); 
         console.log(`email,     ${props.inputEmail}`,); 
 
+        //navigate("/register/Check_user");
+        //<Navigate to="/register/Check_user" replace={true} />
         
     }
 
@@ -93,7 +96,10 @@ function Register(props){
                 </label><br/>
 
                 <input type="submit" value="Validation RGPD" />
+                
             </form>
+
+            
         </div> 
     )
 }
