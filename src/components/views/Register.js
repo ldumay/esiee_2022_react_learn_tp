@@ -3,12 +3,12 @@ import { useState } from "react"
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
-function Register(){
+function Register(props){
     const [inputFirstName,setFirstName]         = useState()
     const [inputLastName,setLastName]           = useState()
     const [inputAge,setage]                     = useState()
     const [inputPhone_number,setPhone_number]   = useState()
-    const [inputEmail,setEmail]                 = useState()
+    //const [inputEmail,setEmail]                 = useState()
 
     function checkValue(type,value){
         switch (type) {
@@ -36,10 +36,12 @@ function Register(){
                 break 
 
             case 'email':
-                const emailform = !! value.match(/.+@.+/);
                 const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (value.match(regEmail)){
-                    console.log("Bon format")
+                    props.setEmail(value)
+
+                    console.log("good format")
+                    console.log(props.inputEmail)
                 }
                 else{
                     console.log("mauvais format")
@@ -51,12 +53,23 @@ function Register(){
           }
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        console.log(`nom,       ${inputLastName}`,); 
+        console.log(`prénom,    ${inputFirstName}`,);    
+        console.log(`age,       ${inputAge}`,); 
+        console.log(`tel,       ${inputPhone_number}`,); 
+        console.log(`email,     ${props.inputEmail}`,); 
+
+        
+    }
 
     return (
         <div>
             <h1>Inscription</h1>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label> Nom         : <input    type="text"
                                                 value={inputLastName}
                                                 onChange={(e) => checkValue("LastName",e.target.value)} /> 
@@ -75,11 +88,11 @@ function Register(){
                                                     maxLength={14}/> 
                 </label><br/>
                 <label> E-mail      : <input    type="email" 
-                                                value={inputEmail}       
+                                                value={props.inputEmail}       
                                                 onChange={(e) => checkValue("email",e.target.value)} /> 
                 </label><br/>
 
-                <input type="submit" onClick={() => alert(inputFirstName)} value="Validation RGPD" />
+                <input type="submit" value="Validation RGPD" />
             </form>
         </div> 
     )
