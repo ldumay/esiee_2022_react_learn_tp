@@ -68,7 +68,8 @@ function Register(){
                                     <Form.Control
                                         type="text"
                                         value={inputLastName}
-                                        onChange={(e) => checkValue("LastName",e.target.value)} />
+                                        onChange={(e) => checkValue("LastName",e.target.value)}
+                                        placeholder="Nom" />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -76,7 +77,8 @@ function Register(){
                                     <Form.Control
                                         type="text" 
                                         value={inputFirstName} 
-                                        onChange={(e) => checkValue("firstName",e.target.value)} />
+                                        onChange={(e) => checkValue("firstName",e.target.value)}
+                                        placeholder="Prénom" />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -84,7 +86,8 @@ function Register(){
                                     <Form.Control
                                         type="text" 
                                         value={inputAge}         
-                                        onChange={(e) => checkValue("age",e.target.value)} />
+                                        onChange={(e) => checkValue("age",e.target.value)}
+                                        placeholder="Âge" />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -93,7 +96,8 @@ function Register(){
                                         type="text" 
                                         value={inputPhone_number}   
                                         onChange={setPhone_number} 
-                                        maxLength={14} />
+                                        maxLength={14}
+                                        placeholder="Téléphone" />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -101,7 +105,8 @@ function Register(){
                                     <Form.Control
                                         type="email" 
                                         value={inputEmail}       
-                                        onChange={(e) => checkValue("email",e.target.value)} />
+                                        onChange={(e) => checkValue("email",e.target.value)}
+                                        placeholder="E-mail" />
                                 </Form.Group>
 
                                 <Col align="center">
