@@ -13,7 +13,8 @@ function Header() {
 		case "/result": currentPage = "Résultat du qestionnaire"; break;
 		case "/films": currentPage = "Liste de films"; break;
 		case "/film-infos": currentPage = "Informations de film"; break;
-		case "/wishlist": currentPage = "Liste d'envie"; break;
+		case "/wishlist": currentPage = "Liste des envies"; break;
+		default: currentPage = "Erreur 404"; break;
 	}
 
 	return (

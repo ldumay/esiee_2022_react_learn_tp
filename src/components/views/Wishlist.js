@@ -1,6 +1,6 @@
 import { Container, Row } from "react-bootstrap"
 import Film from "../models/Film"
-import Films from "../views/Films"
+import FilmsInfos from "../views/FilmsInfos"
 import Header from "./Header"
 
 function Wishlist(currentUser) {
@@ -44,7 +44,7 @@ function Wishlist(currentUser) {
                     <Row>
                         {filmList.map((film) => (
                             <li key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
-                                <Films film={film} />
+                                <FilmsInfos film={film} />
                             </li>
                         )
                         )}
