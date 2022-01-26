@@ -18,9 +18,7 @@ function Home(){
                     >
                     Participer au concours 
                     </a>
-
-                <br/>
-                <div>
+                    
                     <h2>Dev test</h2>
                     <ul>
                         <li><a className="App-link" href="/">Accueil</a></li>
