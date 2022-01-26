@@ -35,10 +35,15 @@ function Register(){
                 }
                 break 
 
-            case 'phone_number':
-                break 
-
             case 'email':
+                const emailform = !! value.match(/.+@.+/);
+                const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (value.match(regEmail)){
+                    console.log("Bon format")
+                }
+                else{
+                    console.log("mauvais format")
+                }
                 break
 
             default:
@@ -66,9 +71,10 @@ function Register(){
                 </label><br/>
                 <label> Téléphone   : <PhoneInput   type="text" 
                                                     value={inputPhone_number}   
-                                                    onChange={setPhone_number} /> 
+                                                    onChange={setPhone_number} 
+                                                    maxLength={14}/> 
                 </label><br/>
-                <label> E-mail      : <input    type="text" 
+                <label> E-mail      : <input    type="email" 
                                                 value={inputEmail}       
                                                 onChange={(e) => checkValue("email",e.target.value)} /> 
                 </label><br/>
