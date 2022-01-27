@@ -18,7 +18,7 @@ function App() {
   const [inputEmail, setEmail] = useState();
   
 	return (
-		<BrowserRouter>
+    <BrowserRouter>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/test" element={<Test />} />
