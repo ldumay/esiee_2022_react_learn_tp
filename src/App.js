@@ -22,6 +22,7 @@ function App() {
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/test" element={<Test />} />
+        <Route exact path="/result" element={<Result />} />
 				<Route exact path="/register" element={<Register inputEmail={inputEmail} setEmail={setEmail} currentUser={currentUser} setUser={setUser} />} />
         <Route exact path="/register/Check_user" element={<RegisterCheckUser inputEmail={inputEmail} setEmail={setEmail}/>} />
 				<Route exact path="/questions" element={<Questionnaire />} />

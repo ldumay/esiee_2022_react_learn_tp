@@ -1,6 +1,11 @@
 .catalog{
-    text-align: center;
+    text-align: left;
+    .cleanFilmItem{
+        width: auto;
+    }
     .choixFilm{
+        text-align: center;
+        display: inline-block;
         margin: 0;
         padding: 1%;
         a{

@@ -20,14 +20,14 @@ function Header() {
 
 	return (
 		<header>
-			<Row>
-				<Col>
+			<Row className="forceWdithFull">
+				<Col md="4">
 					<Link to="/" title="Retour à l'accueil" alt="Retour à l'accueil">FlexÔCinosh</Link>
 				</Col>
-				<Col>
+				<Col md="4">
 					<h1>{currentPage}</h1>
 				</Col>
-				<Col></Col>
+				<Col md="4"></Col>
 			</Row>
 		</header>
 	)

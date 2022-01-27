@@ -9,6 +9,7 @@ function Catalog() {
         <Container>
             <div className="page">
                 <Row>
+                    {/* Liste des films affichés */}
                     <div className="catalog">
 
                         {/* Modèle d'une affiche de film */}
