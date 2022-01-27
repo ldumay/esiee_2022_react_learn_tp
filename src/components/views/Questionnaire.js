@@ -28,14 +28,15 @@ function Questionnaire(){
                                 <div key={question.id}>
                                     <h3><u>{question.Text}</u></h3>
                                     <Form>
-                                        {question.answers.map((answer, index) => (
+                                        {/*
+                                        {question.getAnswers(question.id).map((answer, index) => (
                                             <div>
                                                 {['radio'].map((type) => (
                                                 <div key={`inline-${type}`} className="mb-3">
                                                     <Form.Check
                                                         inline
                                                         label={answer}
-                                                        name="group1"
+                                                        name={answer}
                                                         type={type}
                                                         id={`inline-${type}-1`}
                                                     />
@@ -43,6 +44,7 @@ function Questionnaire(){
                                                 ))}
                                             </div>
                                         ))}
+                                        */}
                                     </Form>
                                 </div>
                             ))}
