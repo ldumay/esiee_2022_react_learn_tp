@@ -16,7 +16,7 @@ function RegisterCheckUser(props){
         if (props.inputEmail !== userInJson){
             console.log("Email non existant, bienvenue sur notre site!!!!!!!!");
             props.setHeaderMessage("")
-            nextPage = '/Questionnaire'
+            nextPage = '/questions'
             navigate(nextPage);
         }
         else {
