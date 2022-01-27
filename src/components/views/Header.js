@@ -9,7 +9,8 @@ function Header() {
 	switch(page.pathname){
 		case "/": currentPage = "Accueil"; break;
 		case "/register": currentPage = "Inscription"; break;
-		//--> cas questionnaire
+		case "/register/Check_user": currentPage = "Résultat de l'inscription"; break;
+		case "/questions": currentPage = "Qestionnaire"; break;
 		case "/result": currentPage = "Résultat du qestionnaire"; break;
 		case "/catalog": currentPage = "Liste de films"; break;
 		case "/film-infos": currentPage = "Informations de film"; break;
@@ -19,14 +20,14 @@ function Header() {
 
 	return (
 		<header>
-			<Row>
-				<Col>
+			<Row className="forceWdithFull">
+				<Col md="4">
 					<Link to="/" title="Retour à l'accueil" alt="Retour à l'accueil">FlexÔCinosh</Link>
 				</Col>
-				<Col>
+				<Col md="4">
 					<h1>{currentPage}</h1>
 				</Col>
-				<Col></Col>
+				<Col md="4"></Col>
 			</Row>
 		</header>
 	)

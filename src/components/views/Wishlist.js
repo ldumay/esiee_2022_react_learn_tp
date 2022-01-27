@@ -34,13 +34,17 @@ function Wishlist(currentUser) {
             <Container>
                 <div className="page">
                     <Row>
-                        {filmList.map((film) => (
-                            <div className="catalog" key={`${film.id}-${film.nom}`} style={{ border: "1px, black" }}>
-                                
-                                {/* <FilmsInfos film={film} /> */}
+                        {/* Liste des films affichés */}
+                        <div className="catalog">
 
-                                {/* Modèle d'une affiche de film */}
-                                <Col md="3" className="choixFilm">
+                            {/* Boucle */}
+                            {filmList.map((film) => (
+
+                                /* <FilmsInfos film={film} /> */
+                                
+                                /* Modèle d'une affiche de film */
+
+                                <Col md="3" className="choixFilm" key={`${film.id}-${film.nom}`}>
                                     <a href="#"
                                         >
                                         <div className="choixFilmItem">
@@ -56,11 +60,10 @@ function Wishlist(currentUser) {
                                         Retirer
                                     </Button>
                                 </Col>
+                            )
+                            )}
 
-                            </div>
-                        )
-                        )}
-
+                        </div>
                     </Row>
                 </div>
             </Container>

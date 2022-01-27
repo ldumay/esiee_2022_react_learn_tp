@@ -4,8 +4,10 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useState } from "react"
 import PhoneInput from 'react-phone-number-input'
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
-function Register(){
+
+function Register(props){
     const [inputFirstName,setFirstName]         = useState()
     const [inputLastName,setLastName]           = useState()
     const [inputAge,setage]                     = useState()
@@ -38,11 +40,13 @@ function Register(){
                 break 
 
             case 'email':
-                const emailform = !! value.match(/.+@.+/);
                 const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if (value.match(regEmail)){
-                    console.log("Bon format")
+                    props.setEmail(value)
                     
+                    console.log("good format")
+                    
+                    console.log(props.inputEmail)
                 }
                 else{
                     console.log("mauvais format")
@@ -54,6 +58,16 @@ function Register(){
           }
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        console.log(`nom,       ${inputLastName}`,); 
+        console.log(`prénom,    ${inputFirstName}`,);    
+        console.log(`age,       ${inputAge}`,); 
+        console.log(`tel,       ${inputPhone_number}`,); 
+        console.log(`email,     ${props.inputEmail}`,);    
+    }
+
     return (
         <div>
             <Header />
@@ -62,7 +76,7 @@ function Register(){
                     <Row>
                         <Col md="2"></Col>
                         <Col md="8">
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Nom</Form.Label>
                                     <Form.Control
@@ -110,12 +124,14 @@ function Register(){
                                 </Form.Group>
 
                                 <Col align="center">
-                                    <Button
-                                        variant="primary"
-                                        type="submit"
-                                        onClick={() => alert(inputFirstName)}>
-                                        Validation RGPD
-                                    </Button>
+                                    <Link to="/register/Check_user">
+                                        <Button
+                                            variant="primary"
+                                            type="submit"
+                                            onClick={() => alert(inputFirstName)}>
+                                            Validation RGPD
+                                        </Button>
+                                    </Link>
                                 </Col>
                             </Form>
                         </Col>
@@ -124,6 +140,15 @@ function Register(){
                 </div>
             </Container>
         </div>
+            /*<form onSubmit={handleSubmit}>
+
+                <Link to="/register/Check_user">
+                    <input type="submit" value="Validation RGPD" />
+                </Link>
+            </form>
+
+            
+        </div> */
     )
 }
 export default Register

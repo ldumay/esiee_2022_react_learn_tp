@@ -18,21 +18,17 @@ function Home(){
                     >
                     Participer au concours 
                     </a>
-
-					<br/>
-					<div>
-						<h2>Dev test</h2>
-						<ul>
-							<li><a className="App-link" href="/">Accueil</a></li>
-							<li><a className="App-link" href="/test">Test</a></li>
-							<li><a className="App-link" href="/register">Insription</a></li>
-							<li><a className="App-link" href="/result">Résultat</a></li>
-							<li><a className="App-link" href="#questions">Questionnaire (non lié)</a></li>
-							<li><a className="App-link" href="/catalog">Liste des films</a></li>
-							<li><a className="App-link" href="/film-infos">Infos d'un film</a></li>
-							<li><a className="App-link" href="/wishlist">Liste des envies</a></li>
-						</ul>
-					</div>
+                    
+                    <h2>Dev test</h2>
+                    <ul>
+                        <li><a className="App-link" href="/">Accueil</a></li>
+                        <li><a className="App-link" href="/register">Insription</a></li>
+                        <li><a className="App-link" href="/questions">Questionnaire</a></li>
+                        <li><a className="App-link" href="/result">Résultat</a></li>
+                        <li><a className="App-link" href="/catalog">Liste des films</a></li>
+                        <li><a className="App-link" href="/film-infos">Infos d'un liste</a></li>
+                        <li><a className="App-link" href="/wishlist">Liste des envies</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
