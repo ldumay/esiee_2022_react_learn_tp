@@ -4,6 +4,7 @@ import Header from './Header'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import "../../styles/FilmListStyles.scss";
+import { Link } from 'react-router-dom';
 
 function Catalog() {
 	const [films, setFilms] = useState()
@@ -37,7 +38,9 @@ function Catalog() {
 											<div className="film" key={index}>
 												<h3>Film {index + 1}</h3>
 												<h2>{film.title}</h2>
-												<img src={film.image} alt="Affiche" />
+												<Link to="/film-infos">
+													<img src={film.image} alt="Affiche" />
+												</Link>
 												<div className="details">
 													<p>👨: {film.directors}</p>
 													<p>📖: {film.releaseState} {film.year}</p>
