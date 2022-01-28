@@ -1,7 +1,8 @@
-import Questions from '../../datas/Questions.json';
+import JsonFileService from "../service/JsonFileHandler";
+
 
 function QuestionsGenerator(){
-    const questions = Questions;
+    const questions = JsonFileService.getQuestionList();
     
     function getAnwsers(questions, idQuestion){
         var anwsers = []

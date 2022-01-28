@@ -4,12 +4,12 @@ import ListeFilms from "./ListeFilms"
  * Model of User
  */
 class User {
-	constructor(id, nom, prenom, dateNaissance, mail) {
-		this.id = id
+	constructor(nom, prenom, dateNaissance, mail, phoneNumber) {
 		this.nom = nom
 		this.prenom = prenom
 		this.dateNaissance = dateNaissance
 		this.mail = mail
+		this.phoneNumber = phoneNumber;
 		this.listFilms = new ListeFilms();
 	}
 
@@ -26,6 +26,13 @@ class User {
 	calculateAge() {
 		let currentYear = new Date().getFullYear();
 		console.log('Age : ' + currentYear - this.dateNaissance.getFullYear);
+	}
+
+	/**
+	 * Check if user has a film in his favorite list
+	 */
+	checkFavoriteFilm(film) {
+		return this.listFilms.includes(film);
 	}
 }
 

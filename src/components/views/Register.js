@@ -5,157 +5,158 @@ import { useState } from "react"
 import PhoneInput from 'react-phone-number-input'
 import Header from './Header';
 import { Link } from 'react-router-dom';
+import User from '../models/User';
 
 
-function Register(props){
-    const [inputFirstName,setFirstName]         = useState()
-    const [inputLastName,setLastName]           = useState()
-    const [inputAge,setage]                     = useState()
-    const [inputPhone_number,setPhone_number]   = useState()
-    const [inputEmail,setEmail]                 = useState()
+function Register(props) {
+	const [inputFirstName, setFirstName] = useState()
+	const [inputLastName, setLastName] = useState()
+	const [inputAge, setage] = useState()
+	const [inputPhone_number, setPhone_number] = useState()
+	const [inputEmail, setEmail] = useState()
 
-    function checkValue(type,value){
-        switch (type) {
-            case "LastName":
-                const LastName = value.replace(/[^a-zA-Z\s]/g,"");
-                setLastName(LastName)
-                //console.log(type,firstName)
-                break
+	function checkValue(type, value) {
+		switch (type) {
+			case "LastName":
+				const LastName = value.replace(/[^a-zA-Z\s]/g, "");
+				setLastName(LastName)
+				//console.log(type,firstName)
+				break
 
-            case "firstName":
-                const firstName = value.replace(/[^a-zA-Z\s]/g,"");
-                setFirstName(firstName)
-                //console.log(type,firstName)
-                break
+			case "firstName":
+				const firstName = value.replace(/[^a-zA-Z\s]/g, "");
+				setFirstName(firstName)
+				//console.log(type,firstName)
+				break
 
-            case 'age':
-                const NotNumber = !isNaN(+value)
-                const age = value.replace(/[^0-9]*/g,"");
-                if (NotNumber){
-                    if (age <= 122){
-                    setage(age)   
-                    }
-                    console.log(age)
-                }
-                break 
+			case 'age':
+				const age = value.replace(/[^0-9]*/g, "");
+				if (!isNaN(+value)) {
+					if (age <= 122) {
+						setage(age)
+					}
+					console.log(age)
+				}
+				break
 
-            case 'email':
-                const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                if (value.match(regEmail)){
-                    props.setEmail(value)
-                    
-                    console.log("good format")
-                    
-                    console.log(props.inputEmail)
-                }
-                else{
-                    console.log("mauvais format")
-                }
-                break
+			case 'email':
+				const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				if (value.match(regEmail)) {
+					setEmail(value)
+					console.log("good format")
 
-            default:
-              return null
-          }
-    }
+					console.log(props.inputEmail)
+				}
+				else {
+					console.log("mauvais format")
+				}
+				break
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        console.log(`nom,       ${inputLastName}`,); 
-        console.log(`prénom,    ${inputFirstName}`,);    
-        console.log(`age,       ${inputAge}`,); 
-        console.log(`tel,       ${inputPhone_number}`,); 
-        console.log(`email,     ${props.inputEmail}`,);    
-    }
+			default:
+				return
+		}
+	}
 
-    function topMessage(){
-        console.log(props.HeaderMessage);
-    }
+	const handleSubmit = (e) => {
+		e.preventDefault();
 
-    return (
-        <div>
-            <Header />
-            <Container>
-                <div className="page">
-                    <Row>
-                        <Col md="2"></Col>
-                        <Col md="8">
-                            <Col align="center">
-                            <h1>{topMessage()} {props.HeaderMessage}</h1>
-                            </Col>
-                            <Form onSubmit={handleSubmit}>
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Nom</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        value={inputLastName}
-                                        onChange={(e) => checkValue("LastName",e.target.value)}
-                                        placeholder="Nom" />
-                                </Form.Group>
+		props.setUser(new User(inputLastName, inputFirstName, inputAge, inputEmail));
 
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Prénom</Form.Label>
-                                    <Form.Control
-                                        type="text" 
-                                        value={inputFirstName} 
-                                        onChange={(e) => checkValue("firstName",e.target.value)}
-                                        placeholder="Prénom" />
-                                </Form.Group>
+		console.log(`nom,       ${inputLastName}`,);
+		console.log(`prénom,    ${inputFirstName}`,);
+		console.log(`age,       ${inputAge}`,);
+		console.log(`tel,       ${inputPhone_number}`,);
+		console.log(`email,     ${inputEmail}`,);
+	}
 
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Âge</Form.Label>
-                                    <Form.Control
-                                        type="text" 
-                                        value={inputAge}         
-                                        onChange={(e) => checkValue("age",e.target.value)}
-                                        placeholder="Âge" />
-                                </Form.Group>
+	function topMessage() {
+		console.log(props.HeaderMessage);
+	}
 
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Téléphone</Form.Label>
-                                    <PhoneInput
-                                        type="text" 
-                                        value={inputPhone_number}   
-                                        onChange={setPhone_number} 
-                                        maxLength={14}
-                                        placeholder="Téléphone" />
-                                </Form.Group>
+	return (
+		<div>
+			<Header />
+			<Container>
+				<div className="page">
+					<Row>
+						<Col md="2"></Col>
+						<Col md="8">
+							<Col align="center">
+								<h1>{topMessage()} {props.HeaderMessage}</h1>
+							</Col>
+							<Form onSubmit={handleSubmit}>
+								<Form.Group className="mb-3" controlId="formBasicPassword">
+									<Form.Label>Nom</Form.Label>
+									<Form.Control
+										type="text"
+										value={inputLastName}
+										onChange={(e) => checkValue("LastName", e.target.value)}
+										placeholder="Nom" />
+								</Form.Group>
 
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>E-mail</Form.Label>
-                                    <Form.Control
-                                        type="email" 
-                                        value={inputEmail}       
-                                        onChange={(e) => checkValue("email",e.target.value)}
-                                        placeholder="E-mail" />
-                                </Form.Group>
+								<Form.Group className="mb-3" controlId="formBasicPassword">
+									<Form.Label>Prénom</Form.Label>
+									<Form.Control
+										type="text"
+										value={inputFirstName}
+										onChange={(e) => checkValue("firstName", e.target.value)}
+										placeholder="Prénom" />
+								</Form.Group>
 
-                                <Col align="center">
-                                    <Link to="/register/Check_user">
-                                        <Button
-                                            variant="primary"
-                                            type="submit"
-                                            onClick={() => alert(inputFirstName)}>
-                                            Validation RGPD
-                                        </Button>
-                                    </Link>
-                                </Col>
-                            </Form>
-                        </Col>
-                        <Col md="2"></Col>
-                    </Row>
-                </div>
-            </Container>
-        </div>
-            /*<form onSubmit={handleSubmit}>
+								<Form.Group className="mb-3" controlId="formBasicPassword">
+									<Form.Label>Âge</Form.Label>
+									<Form.Control
+										type="text"
+										value={inputAge}
+										onChange={(e) => checkValue("age", e.target.value)}
+										placeholder="Âge" />
+								</Form.Group>
 
-                <Link to="/register/Check_user">
-                    <input type="submit" value="Validation RGPD" />
-                </Link>
-            </form>
+								<Form.Group className="mb-3" controlId="formBasicPassword">
+									<Form.Label>Téléphone</Form.Label>
+									<PhoneInput
+										type="text"
+										value={inputPhone_number}
+										onChange={setPhone_number}
+										maxLength={14}
+										placeholder="Téléphone" />
+								</Form.Group>
 
-            
-        </div> */
-    )
+								<Form.Group className="mb-3" controlId="formBasicPassword">
+									<Form.Label>E-mail</Form.Label>
+									<Form.Control
+										type="email"
+										value={inputEmail}
+										onChange={(e) => checkValue("email", e.target.value)}
+										placeholder="E-mail" />
+								</Form.Group>
+
+								<Col align="center">
+									<Link to="/register/Check_user">
+										<Button
+											variant="primary"
+											type="submit"
+											onClick={() => alert(inputFirstName)}>
+											Validation RGPD
+										</Button>
+									</Link>
+								</Col>
+							</Form>
+						</Col>
+						<Col md="2"></Col>
+					</Row>
+				</div>
+			</Container>
+		</div>
+		/*<form onSubmit={handleSubmit}>
+
+			<Link to="/register/Check_user">
+				<input type="submit" value="Validation RGPD" />
+			</Link>
+		</form>
+
+	    
+	</div> */
+	)
 }
 export default Register
