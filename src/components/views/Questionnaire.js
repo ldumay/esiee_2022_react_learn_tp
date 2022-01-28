@@ -28,23 +28,23 @@ function Questionnaire(){
                                 <div key={question.id}>
                                     <h3><u>{question.Text}</u></h3>
                                     <Form>
-                                        {/*
-                                        {question.getAnswers(question.id).map((answer, index) => (
-                                            <div>
-                                                {['radio'].map((type) => (
-                                                <div key={`inline-${type}`} className="mb-3">
-                                                    <Form.Check
-                                                        inline
-                                                        label={answer}
-                                                        name={answer}
-                                                        type={type}
-                                                        id={`inline-${type}-1`}
-                                                    />
-                                                </div>
-                                                ))}
-                                            </div>
-                                        ))}
-                                        */}
+                                        <Row>
+                                            {question.answers.map((answer, index) => (
+                                                <Col md="12">
+                                                    {['radio'].map((type) => (
+                                                    <div key={`inline-${type}`}>
+                                                        <Form.Check
+                                                            inline
+                                                            label={answer}
+                                                            name="choix"
+                                                            type={type}
+                                                            id={`inline-${type}-1`}
+                                                        />
+                                                    </div>
+                                                    ))}
+                                                </Col>
+                                            ))}
+                                        </Row>
                                     </Form>
                                 </div>
                             ))}
