@@ -1,32 +1,29 @@
-/**
- * Model of Film
- */
+import "../../styles/FilmListStyles.scss";
 class Film {
-	constructor(id, title, image, genres, dateSortie, description, ratio) {
+	constructor(id, title, image, genres, releaseState, year, plot, contentRating) {
 		this.id = id;
 		this.title = title;
 		this.image = image;
 		this.genres = genres;
-		this.dateSortie = dateSortie;
-		this.description = description;
-		this.ratio = ratio;
+		this.releaseState = releaseState;
+		this.year = year;
+		this.plot = plot;
+		this.contentRating = contentRating;
 	}
 
 	showFilm() {
 		return (
-			<div id="{id-title}" class="col-md-12">
-				<h3>#{this.id} - {this.title}</h3>
-				<img
-					className="imageFilm"
-					alt="{this.id - this.title}"
-					src={this.image}
-				/>
-				<p>
-					Genre : {this.genres}
-					Date de sortie : {this.dateSortie}
-					Description : {this.description}
-					Ratio : {this.ratio}
-				</p>
+			<div className="thiss">
+				<div className="this">
+					<h2>{this.title}</h2>
+					<img src={this.image} alt="Affiche"	/>
+					<div className="details">
+					<p>👨: {this.directors}</p>
+					<p>📖: {this.releaseState} {this.year}</p>
+					<p>⏰: {this.runtimeStr}</p>
+					<p>{this.plot}</p>
+					</div>
+				</div>
 			</div>
 		)
 	}

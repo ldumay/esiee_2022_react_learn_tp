@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import "../../styles/FilmListStyles.scss";
 
 function BoxOffices() {
@@ -9,17 +9,11 @@ function BoxOffices() {
 	const domain = "https://imdb-api.com/en/API"
 	const comingSoonUrl = "/ComingSoon/k_hiba3sak";
 
-	var movieList = []
-	const[movie, setFilm] = useState()
-
 	const fetchData = async () => {
 		const response = await axios.get(domain+comingSoonUrl);
 
 		setFilms(response.data.items);
 	}
-
-	
-
 
 	return (
 		<div className="BoxOffices">
@@ -34,14 +28,9 @@ function BoxOffices() {
 			</div>
 		
 		  	{/* Display data from API */}
-			  <div className="films">
+			<div className="films">
 				{films &&
 				films.map((film, index) => {
-					const id = film.id;
-					const rank = film.rank;
-					//const cleanedDate = new Date(film.released).toDateString();
-					const titles = film.title;
-
 					return (
 					<div className="film" key={index}>
 						<h3>Film {index + 1}</h3>
