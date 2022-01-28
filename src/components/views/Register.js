@@ -30,7 +30,7 @@ function Register(props){
 
             case 'age':
                 const NotNumber = !isNaN(+value)
-                const age = value.replace(/[^0-9]*/g,"");
+                const age = value.replace(/[^0-9]/g,"");
                 if (NotNumber){
                     if (age <= 122){
                     setage(age)   

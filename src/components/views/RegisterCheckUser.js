@@ -8,6 +8,7 @@ import {useNavigate} from 'react-router-dom';
 
 function RegisterCheckUser(props){
     const userInJson = "TOTO@TOTO.fr"
+    
     const navigate = useNavigate();
 
     function handleClick() {
