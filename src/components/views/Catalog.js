@@ -2,6 +2,7 @@ import '../../styles/Catalog.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import Header from './Header'
 import "../../styles/FilmListStyles.scss";
+import { Link } from 'react-router-dom';
 
 
 function Catalog(props) {
@@ -36,7 +37,9 @@ function Catalog(props) {
 											<div className="film" key={index}>
 												<h3>Film {index + 1}</h3>
 												<h2>{film.title}</h2>
-												<img src={film.image} alt="Affiche" />
+												<Link to="/film-infos">
+													<img src={film.image} alt="Affiche" />
+												</Link>
 												<div className="details">
 													<p>👨: {film.directors}</p>
 													<p>📖: {film.releaseState} {film.year}</p>
