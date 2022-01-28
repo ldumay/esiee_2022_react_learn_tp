@@ -1,21 +1,32 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import 'react-phone-number-input/style.css'
 import Header from './Header'
+//import Questionnaire from './Questionnaire'
 //const [inputEmail, setEmail] = useState();
+
+import {useNavigate} from 'react-router-dom';
 
 function RegisterCheckUser(props){
     const userInJson = "TOTO@TOTO.fr"
+    const navigate = useNavigate();
 
-    function Checkmail(){
-        if (props.inputEmail == userInJson){
-            console.log("Utilisateur existant");
-            //here call component register and change the URL
+    function handleClick() {
+        let nextPage;
+
+        if (props.inputEmail !== userInJson){
+            console.log("Email non existant, bienvenue sur notre site!!!!!!!!");
+            props.setHeaderMessage("")
+            nextPage = '/questions'
+            navigate(nextPage);
         }
         else {
-            console.log("Email non existant, bienvenue sur notre site!!!!!!!!");
-            //call component quiz and change the URL
+            console.log("Utilisateur existant");
+            nextPage = '/register'
+            props.setHeaderMessage("WARNING utilisateur existante")
+            navigate(nextPage);
         }
-    }
+        
+      }
     return (
         <div>
             <Header />
@@ -29,7 +40,7 @@ function RegisterCheckUser(props){
                     </Row>
                 </div>
             </Container>
-            {Checkmail()}
+            <button type="button" onClick={(e) => handleClick()}> Next page </button>
         </div> 
     )
 }

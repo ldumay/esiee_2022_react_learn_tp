@@ -14,17 +14,19 @@ import RegisterCheckUser from './components/views/RegisterCheckUser';
 import Questionnaire from './components/views/Questionnaire';
 
 function App() {
-	const [currentUser, setUser] = useState();
-  const [inputEmail, setEmail] = useState();
-  
+	const [currentUser, setUser] 			= useState();
+  	const [inputEmail, setEmail] 			= useState();
+	let   [HeaderMessage,setHeaderMessage]	= useState()
+	const CheckUserElements = <RegisterCheckUser inputEmail={inputEmail} setEmail={setEmail} HeaderMessage={HeaderMessage} setHeaderMessage={setHeaderMessage}/>
+	const RegisterElements 	= <Register inputEmail={inputEmail} setEmail={setEmail} currentUser={currentUser} setUser={setUser} HeaderMessage={HeaderMessage} setHeaderMessage={setHeaderMessage}/>
 	return (
     <BrowserRouter>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/test" element={<Test />} />
         <Route exact path="/result" element={<Result />} />
-				<Route exact path="/register" element={<Register inputEmail={inputEmail} setEmail={setEmail} currentUser={currentUser} setUser={setUser} />} />
-        <Route exact path="/register/Check_user" element={<RegisterCheckUser inputEmail={inputEmail} setEmail={setEmail}/>} />
+				<Route exact path="/register" element={RegisterElements} />
+        <Route exact path="/register/Check_user" element={CheckUserElements} />
 				<Route exact path="/questions" element={<Questionnaire />} />
         <Route exact path="/catalog" element={<Catalog />} />
 				<Route exact path="/film-infos" element={<FilmsInfos />} />
