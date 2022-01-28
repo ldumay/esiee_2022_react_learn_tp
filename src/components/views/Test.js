@@ -10,9 +10,6 @@ function Test(){
 	const domain = "https://imdb-api.com/en/API"
 	const comingSoonUrl = "/ComingSoon/k_hiba3sak";
 
-	var movieList = []
-	const[movie, setFilm] = useState()
-
 	const fetchData = async () => {
 		const response = await axios.get(domain+comingSoonUrl);
 
