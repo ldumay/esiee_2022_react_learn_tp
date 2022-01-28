@@ -68,6 +68,10 @@ function Register(props){
         console.log(`email,     ${props.inputEmail}`,);    
     }
 
+    function topMessage(){
+        console.log(props.HeaderMessage);
+    }
+
     return (
         <div>
             <Header />
@@ -76,6 +80,9 @@ function Register(props){
                     <Row>
                         <Col md="2"></Col>
                         <Col md="8">
+                            <Col align="center">
+                            <h1>{topMessage()} {props.HeaderMessage}</h1>
+                            </Col>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Nom</Form.Label>

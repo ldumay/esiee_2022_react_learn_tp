@@ -1,0 +1,62 @@
+[
+    {
+        "id" : 1, 
+        "Text" : "Comment se nomme Spider-Man dans Spider-Man: Into the Spider-Verse ?", 
+        "answers" : {
+            "choix1" : "Aaron Davis",
+            "choix2" : "Peter B. Parker",
+            "choix3" : "Jefferson Davis", 
+            "choix4" : "Gwen Stay", 
+            "choix5" : "Miles Morales"
+        },
+        "Correct" : "Miles Morales"
+    },
+    {
+        "id" : 2, 
+        "Text" : "Où est né Miles Morales, alias Spider-Man ?", 
+        "answers" : {
+            "choix1" : "Queens, New York, Terre-1610",
+            "choix2" : "Bronx, New York, Terre-1610",
+            "choix3" : "Brooklyn, New York, Terre-1610", 
+            "choix4" : "Harlem, New York, Terre-1610", 
+            "choix5" : "Manhattan, New York, Terre-1610"
+        },
+        "Correct" : "Brooklyn, New York, Terre-1610"
+    },
+    {
+        "id" : 3, 
+        "Text" : "Quel artiste à prêter sa voix à Miles Morales, alias Spider-Man ?", 
+        "answers" : {
+            "choix1" : "Brian Tyree Henry",
+            "choix2" : "Mahershala Ali",
+            "choix3" : "Chris Miller", 
+            "choix4" : "Shameik Moore", 
+            "choix5" : "Phil Lord"
+        },
+        "Correct" : "Shameik Moore"
+    },
+    {
+        "id" : 4, 
+        "Text" : "Qui est le grand ennemi combatu dans Spider-Man: Into the Spider-Verse ?", 
+        "answers" : {
+            "choix1" : "Le Caïd",
+            "choix2" : "Dr Olivia Octavius",
+            "choix3" : "Tombstone", 
+            "choix4" : "Le Scorpion", 
+            "choix5" : "le Rôdeur"
+        },
+        "Correct" : "Le Caïd"
+    },
+    {
+        "id" : 5, 
+        "Text" : "Quel artéfact est utilisé pour créer un un portail interdimensionnel dans Spider-Man: Into the Spider-Verse ?", 
+        "answers" : {
+            "choix1" : "La pierre philosophale",
+            "choix2" : "Une kryptonite",
+            "choix3" : "Une central à fusion", 
+            "choix4" : "Un Synchrotron", 
+            "choix5" : "Un accélérateur de particules"
+        },
+        "Correct" : "Un Synchrotron"
+    }
+]
