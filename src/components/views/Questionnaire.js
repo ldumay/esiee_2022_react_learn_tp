@@ -6,11 +6,11 @@ import Header from './Header'
 import QuestionsGenerator from '../controllers/QuestionsGenerator'
 
 function Questionnaire(){  
-    const [currentQuestion, updateCurrentQuestion] = useState(0) 
+    const [currentQuestion, updateCurrentQuestion] = useState(1)
     const showQuestion = new Question()
     var questionsGenerator = new QuestionsGenerator()
     
-    console.log(questionsGenerator)
+    console.log(currentQuestion)
 
     return( 
         <div>
@@ -19,7 +19,13 @@ function Questionnaire(){
                 <div className="page">
                     <Row className="questionnaireTop">
                         <Col>
-                            <h1>{showQuestion.text}</h1>
+                            {currentQuestion>0 && currentQuestion<6 && 
+                                <div>
+                                    <h1>Question #{currentQuestion}</h1>
+                                    <hr/>
+                                </div>
+                            }
+                            <h3>{showQuestion.text}</h3>
                         </Col>
                     </Row>
                     <Row className="questionnaireContent">
@@ -53,28 +59,32 @@ function Questionnaire(){
                     <Row className="questionnaireButtons">
                         <Col>
                             <div>
-                                <Button 
-                                    variant="outline-secondary"
-                                    onClick={()=>updateCurrentQuestion(currentQuestion-1)}
-                                >
-                                    Question précédente
-                                </Button>
+                                {currentQuestion>1 &&
+                                    <Button 
+                                        variant="outline-secondary"
+                                        onClick={()=>updateCurrentQuestion(currentQuestion-1)}
+                                    >
+                                        Question précédente
+                                    </Button>
+                                }
                             </div>
                         </Col>
                         <Col>
                             <div>
-                                <Button 
-                                    variant="outline-secondary"
-                                    onClick={()=>updateCurrentQuestion(currentQuestion+1)}
-                                >
-                                    Question suivante
-                                </Button>
+                                {currentQuestion<5 &&
+                                    <Button 
+                                        variant="outline-secondary"
+                                        onClick={()=>updateCurrentQuestion(currentQuestion+1)}
+                                    >
+                                        Question suivante
+                                    </Button>
+                                }
                             </div>
                         </Col>
                     </Row>
                     <Row className="questionnaireBottom">
                         <Col>
-                            <p>Question actuel : {currentQuestion}</p>
+                            <p><i>Questionnaire générer.</i></p>
                         </Col>
                     </Row>
                 </div>
