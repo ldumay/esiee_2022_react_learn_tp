@@ -1,12 +1,11 @@
 import '../../styles/Catalog.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import Header from './Header'
-import axios from 'axios';
-import { useState, useEffect } from 'react';
 import "../../styles/FilmListStyles.scss";
 
-function Catalog() {
-	const [films, setFilms] = useState()
+
+function Catalog(props) {
+	/*const [films, setFilms] = useState()
 	const domain = "https://imdb-api.com/en/API"
 	const comingSoonUrl = "/ComingSoon/k_hiba3sak";
 
@@ -18,7 +17,7 @@ function Catalog() {
 	useEffect(() => {
         // write your code here, it's like componentWillMount
         fetchData();
-    }, [])
+    }, [])*/
 
 	return (
 		<div>
@@ -31,8 +30,8 @@ function Catalog() {
 
 							{/* Display data from API */}
 							<div className="films">
-								{films &&
-									films.map((film, index) => {
+								{props.films &&
+									props.films.map((film, index) => {
 										return (
 											<div className="film" key={index}>
 												<h3>Film {index + 1}</h3>
