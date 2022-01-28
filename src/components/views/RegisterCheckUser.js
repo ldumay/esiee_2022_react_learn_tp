@@ -10,6 +10,7 @@ function RegisterCheckUser(props) {
 	const navigate = useNavigate();
 
 	function infosUser() {
+		console.log(props.currentUser);
 		if (props.currentUser === undefined) {
 			console.log('Utilisateur non défini, veuillez réessayer');
 			return (
@@ -26,7 +27,7 @@ function RegisterCheckUser(props) {
 							<h1>CheckUser Sheet</h1>
 							<p>Nom : {props.currentUser.nom}</p>
 							<p>Prénom : {props.currentUser.prenom}</p>
-							<p>Mail : {props.currentUser.inputEmail}</p>
+							<p>Mail : {props.currentUser.mail}</p>
 						</Col>
 					</Row>
 					<button type="button" onClick={(e) => Checkmail()}> Next page </button>
@@ -40,8 +41,8 @@ function RegisterCheckUser(props) {
 		let nextPage;
 
 		console.log(userInJson);
-		console.log(JsonFileService.getQuestionList());
-		if (userInJson.includes(props.currentUser.mail)) {
+		console.log(props.currentUser.mail);
+		if (!userInJson.includes(props.currentUser.mail)) {
 			console.log("Email non existant, bienvenue sur notre site !");
 			props.setHeaderMessage("")
 			nextPage = '/questions'

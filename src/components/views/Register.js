@@ -132,31 +132,27 @@ function Register(props) {
 								</Form.Group>
 
 								<Col align="center">
-									<Link to="/register/Check_user">
-										<Button
-											variant="primary"
-											type="submit"
-											onClick={() => alert(inputFirstName)}>
-											Validation RGPD
-										</Button>
-									</Link>
+									<Button
+										variant="primary"
+										type="submit"
+										onClick={() => alert("Je conscends à vendre mes informations à Satan")}>
+										Validation RGPD
+									</Button>
 								</Col>
 							</Form>
 						</Col>
 						<Col md="2"></Col>
 					</Row>
+					<Row>
+						<form onSubmit={handleSubmit}>
+							<Link to="/register/Check_user">
+								<input type="submit" value="Valider l'inscription" />
+							</Link>
+						</form>
+					</Row>
 				</div>
 			</Container>
 		</div>
-		/*<form onSubmit={handleSubmit}>
-
-			<Link to="/register/Check_user">
-				<input type="submit" value="Validation RGPD" />
-			</Link>
-		</form>
-
-	    
-	</div> */
 	)
 }
 export default Register
