@@ -4,7 +4,7 @@ storage.setItem("JSON", jsonFile);
 
 class JsonFileService {
 	static getUserRegisteredList() {
-		return storage.getItem("JSON");
+		return storage.getItem("JSON").split(',');
 	}
 
 	static addToUserRegisteredList(newJsonData) {
