@@ -26,30 +26,28 @@ function Catalog(props) {
 			<Container>
 				<Row>
 					<div className="page">
-						<div className="BoxOffices">
-							<h1>Films going out soon</h1>
+						<h1>Films going out soon</h1>
 
-							{/* Display data from API */}
-							<div className="films">
-								{props.films &&
-									props.films.map((film, index) => {
-										return (
-											<div className="film" key={index}>
-												<h3>Film {index + 1}</h3>
-												<h2>{film.title}</h2>
-												<Link to="/film-infos">
-													<img src={film.image} alt="Affiche" />
-												</Link>
-												<div className="details">
-													<p>👨: {film.directors}</p>
-													<p>📖: {film.releaseState} {film.year}</p>
-													<p>⏰: {film.runtimeStr}</p>
-													<p>{film.plot}</p>
-												</div>
+						{/* Display data from API */}
+						<div className="films">
+							{props.films &&
+								props.films.map((film, index) => {
+									return (
+										<div className="film" key={index}>
+											<h3>Film {index + 1}</h3>
+											<h2>{film.title}</h2>
+											<Link to="/film-infos">
+												<img src={film.image} alt="Affiche" />
+											</Link>
+											<div className="details">
+												<p>👨: {film.directors}</p>
+												<p>📖: {film.releaseState} {film.year}</p>
+												<p>⏰: {film.runtimeStr}</p>
+												<p>{film.plot}</p>
 											</div>
-										);
-									})}
-							</div>
+										</div>
+									);
+								})}
 
 						</div>
 					</div>
