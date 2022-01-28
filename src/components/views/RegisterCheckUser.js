@@ -4,15 +4,35 @@ import JsonFileService from '../service/JsonFileHandler';
 import Header from './Header'
 
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 function RegisterCheckUser(props) {
 	const userInJson = JsonFileService.getUserRegisteredList();
 	const navigate = useNavigate();
 
-	if (props.currentUser === undefined) {
-		console.log('Utilisateur non défini, veuillez réessayé');
-		useEffect(navigate('/register', {replace : true}));
+	function infosUser() {
+		if (props.currentUser === undefined) {
+			console.log('Utilisateur non défini, veuillez réessayer');
+			return (
+				<div className="page">
+					<p>Erreur lors de l'inscription, veuillez réessayer</p>
+					<button type="button" onClick={() => { navigate('/register', { replace: true }) }}> Retour à l'inscription </button>
+				</div>
+			);
+		} else {
+			return (
+				<div className="page">
+					<Row>
+						<Col>
+							<h1>CheckUser Sheet</h1>
+							<p>Nom : {props.currentUser.nom}</p>
+							<p>Prénom : {props.currentUser.prenom}</p>
+							<p>Mail : {props.currentUser.inputEmail}</p>
+						</Col>
+					</Row>
+					<button type="button" onClick={(e) => Checkmail()}> Next page </button>
+				</div>
+			);
+		}
 	}
 
 
@@ -31,24 +51,15 @@ function RegisterCheckUser(props) {
 			props.setHeaderMessage("WARNING utilisateur existante")
 			nextPage = '/register'
 		}
-		navigate(nextPage);
-
+		navigate(nextPage, {replace: true});
 	}
 
 	return (
 		<div>
 			<Header />
 			<Container>
-				<div className="page">
-					<Row>
-						<Col>
-							<h1>CheckUser Sheet</h1>
-							<p>Mail : {props.currentUser.inputEmail}</p>
-						</Col>
-					</Row>
-				</div>
+				{infosUser()}
 			</Container>
-			<button type="button" onClick={(e) => Checkmail()}> Next page </button>
 		</div>
 	)
 }
