@@ -3,6 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import Film from "../models/Film"
 import FilmsInfos from "../views/FilmsInfos"
 import Header from "./Header"
+import Footer from './Footer'
 
 function Wishlist(currentUser) {
 	//let filmList = currentUser.filmList;
@@ -65,6 +66,7 @@ function Wishlist(currentUser) {
 
                         </div>
                     </Row>
+                    <Footer />
                 </div>
             </Container>
         </div>

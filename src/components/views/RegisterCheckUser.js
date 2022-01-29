@@ -4,6 +4,7 @@ import JsonFileService from '../service/JsonFileHandler';
 import Header from './Header'
 
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 function RegisterCheckUser(props) {
 	const userInJson = JsonFileService.getUserRegisteredList();
@@ -15,8 +16,13 @@ function RegisterCheckUser(props) {
 			console.log('Utilisateur non défini, veuillez réessayer');
 			return (
 				<div className="page">
-					<p>Erreur lors de l'inscription, veuillez réessayer</p>
-					<button type="button" onClick={() => { navigate('/register', { replace: true }) }}> Retour à l'inscription </button>
+					<Row>
+						<Col align="center">
+							<p>Erreur lors de l'inscription, veuillez réessayer</p>
+							<Button variant="danger" type="button" onClick={() => { navigate('/register', { replace: true }) }}> Retour à l'inscription </Button>
+						</Col>
+					</Row>
+					<Footer />
 				</div>
 			);
 		} else {
@@ -31,6 +37,7 @@ function RegisterCheckUser(props) {
 						</Col>
 					</Row>
 					<button type="button" onClick={(e) => Checkmail()}> Next page </button>
+					<Footer />
 				</div>
 			);
 		}

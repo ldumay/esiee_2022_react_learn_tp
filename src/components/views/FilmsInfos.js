@@ -1,6 +1,7 @@
 import '../../styles/FilmsInfos.scss'
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import Header from './Header';
+import Footer from './Footer';
 
 function FilmsInfos(props) {
 	
@@ -68,6 +69,7 @@ function FilmsInfos(props) {
 							</Row>
 						</Col>
 					</Row>
+					<Footer />
 				</div>
 			</Container>
 		</div>

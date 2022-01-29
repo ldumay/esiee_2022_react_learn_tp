@@ -2,6 +2,7 @@ import '../../styles/Catalog.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import Header from './Header'
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 
 function Catalog(props) {
@@ -47,6 +48,7 @@ function Catalog(props) {
 								})}
 
 						</div>
+						<Footer />
 					</div>
 				</Row>
 			</Container>
