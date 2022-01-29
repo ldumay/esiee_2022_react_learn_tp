@@ -35,11 +35,11 @@ function FilmsInfos(props) {
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Public :</b></p></td>
-											<td><p>{film.rating}</p></td>
+											<td><p>{film.contentRating}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Durée :</b></p></td>
-											<td><p>{film.runTimeStr}</p></td>
+											<td><p>{film.runtimeStr}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Réalisation :</b></p></td>
