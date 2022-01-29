@@ -137,6 +137,7 @@ function Questionnaire(props) {
 							))}
 							{totalResponse == 5 &&
 								<div>
+									<br/><br/>
 									<form onSubmit={handleSubmit}>
 										<Link to="/result">
 											<Button type="submit" variant="success"	>
@@ -154,7 +155,7 @@ function Questionnaire(props) {
 								{
 									/*currentQuestion>1 &&
 										<Button 
-											variant="outline-secondary"
+											variant="outline-primary"
 											onClick={()=>updateCurrentQuestion(currentQuestion-1)}
 										>
 											Question précédente
@@ -167,18 +168,20 @@ function Questionnaire(props) {
 							<div>
 								{currentQuestion < 5 &&
 									<Button
-										variant="outline-secondary"
+										variant="outline-primary"
 										onClick={checkChangeQuestion}
 									>
 										Question suivante
 									</Button>
 								}
+								{/*
 								<Button
 									variant="outline-primary"
 									onClick={() => checkConst()}
 								>
 									TEST
 								</Button>
+								*/}
 							</div>
 						</Col>
 					</Row>
