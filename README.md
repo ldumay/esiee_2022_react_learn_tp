@@ -2,11 +2,11 @@
 ## Créer un jeux concours sur le cinéma :
 
 ## Collaborateurs - Estimation des membres
-- __4/5__ - Maxence HENNEKEIN : maxence.hennekein@edu.esiee-it.fr
+- __5/5__ - Maxence HENNEKEIN : maxence.hennekein@edu.esiee-it.fr
 - __4/5__ - Bilal MOUHIB : bilal.mouhib@edu.esiee-it.fr
 - __4/5__ - Chen ZHIHAO : zhihao.chen@edu.esiee-it.fr
-- __4/5__ - Loïc DUMAY : loic.dumay@edu.itescia.fr
-- __4/5__ - Quentin NARDY : quentin.nardy@edu.itescia.fr
+- __5/5__ - Loïc DUMAY : loic.dumay@edu.itescia.fr
+- __3/5__ - Quentin NARDY : quentin.nardy@edu.itescia.fr
 
 ## Langages du projst
 - ReactJS (inclus HTML / CSS / JS / JSX)
