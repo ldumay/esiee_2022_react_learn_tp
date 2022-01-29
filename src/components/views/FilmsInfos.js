@@ -1,11 +1,12 @@
 import '../../styles/FilmsInfos.scss'
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Button, Col, Container, Row, Table } from 'react-bootstrap';
 import Header from './Header';
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function FilmsInfos(props) {
 	
-	let film = props.films
-	console.log(film);
+	let film = props.film
 
 	return (
 		<div>
@@ -16,7 +17,7 @@ function FilmsInfos(props) {
 						<Col md="5">
 							<img
 								className="imageUrl"
-								alt="Affiche du props.film"
+								alt="Affiche du film"
 								src={film.image}
 							/>
 						</Col>
@@ -34,11 +35,11 @@ function FilmsInfos(props) {
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Public :</b></p></td>
-											<td><p>{film.rating}</p></td>
+											<td><p>{film.contentRating}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Durée :</b></p></td>
-											<td><p>{film.runTimeStr}</p></td>
+											<td><p>{film.runtimeStr}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Réalisation :</b></p></td>
@@ -49,26 +50,28 @@ function FilmsInfos(props) {
 											<td><p>{film.stars}</p></td>
 										</tr>
 										<tr>
-											<td className="leftElements"><p><b>Lien :</b></p></td>
-											<td>
-												<p>
-													<a
-														href="https://www.imdb.com/title/tt4633694/"
-														target="_blank"
-														rel="noreferrer"
-													>IMDB</a>
-												</p>
-											</td>
-										</tr>
-										<tr>
 											<td className="leftElements"><p><b>Description :</b></p></td>
 											<td><p>{film.plot}</p></td>
 										</tr>
 									</tbody>
 								</Table>
 							</Row>
+							<Row>
+								<Col align="center">
+									<form>
+										<Link to="/catalog">
+											<Button variant="danger" type="submit">Retourner à la liste des films</Button>
+										</Link>
+										<br/><br/>
+										<Link to="/wishlist">
+											<Button variant="success" type="submit">Ajouter à la liste de souhaite<br/>(Déso, trop tard pour continué 😅)</Button>
+										</Link>
+									</form>
+								</Col>
+							</Row>
 						</Col>
 					</Row>
+					<Footer />
 				</div>
 			</Container>
 		</div>

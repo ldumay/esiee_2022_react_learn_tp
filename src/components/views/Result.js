@@ -2,6 +2,7 @@ import '../../styles/Pages.scss'
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Header from "./Header";
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function Result(props){
     console.log("totalGoodResponse : "+props.totalGoodResponse)
@@ -27,6 +28,7 @@ function Result(props){
                             </Link>
                         </Col>
                     </Row>
+                    <Footer />
                 </div>
             </Container>
         </div>

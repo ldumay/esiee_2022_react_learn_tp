@@ -6,6 +6,7 @@ import PhoneInput from 'react-phone-number-input'
 import Header from './Header';
 import { Link } from 'react-router-dom';
 import User from '../models/User';
+import Footer from './Footer';
 
 
 function Register(props) {

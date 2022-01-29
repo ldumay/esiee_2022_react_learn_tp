@@ -1,12 +1,12 @@
 # Projet React - FlexÔCinosh
 ## Créer un jeux concours sur le cinéma :
 
-## Collaborateurs :
-- Maxence HENNEKEIN : maxence.hennekein@edu.esiee-it.fr
-- Bilal MOUHIB : bilal.mouhib@edu.esiee-it.fr
-- Chen ZHIHAO : zhihao.chen@edu.esiee-it.fr
-- Loïc DUMAY : loic.dumay@edu.itescia.fr
-- Quentin NARDY : quentin.nardy@edu.itescia.fr
+## Collaborateurs - Estimation des membres
+- __5/5__ - Maxence HENNEKEIN : maxence.hennekein@edu.esiee-it.fr
+- __4/5__ - Bilal MOUHIB : bilal.mouhib@edu.esiee-it.fr
+- __4/5__ - Chen ZHIHAO : zhihao.chen@edu.esiee-it.fr
+- __5/5__ - Loïc DUMAY : loic.dumay@edu.itescia.fr
+- __3.5/5__ - Quentin NARDY : quentin.nardy@edu.itescia.fr
 
 ## Langages du projst
 - ReactJS (inclus HTML / CSS / JS / JSX)

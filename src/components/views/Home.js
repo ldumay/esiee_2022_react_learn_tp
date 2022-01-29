@@ -1,7 +1,7 @@
 import '../../styles/Home.scss'
 import logo from '../../images/logo_3.jpeg';
 
-function Home(){
+function Home(props){
 
     return (
         <div className="App">
@@ -18,6 +18,11 @@ function Home(){
                     >
                     Participer au concours 
                     </a>
+                    <p className="production">
+                        Réalisé par :
+                        <br/>Maxence HENNEKEIN - Bilal MOUHIB - Chen ZHIHAO
+                        <br/>Loïc DUMAY - Quentin NARDY
+                    </p>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import '../../styles/Catalog.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import Header from './Header'
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 
 function Catalog(props) {
@@ -23,7 +24,7 @@ function Catalog(props) {
 									console.log({index})
 									return (
 										<Col md="3" className="choixFilm" key={index}>
-											<Link to={{ pathname: "/film-infos", state: {id: {index}}}}>
+											<Link  to="/film-infos" onClick={()=>{props.setFilm(film)}}>
 												<div className="choixFilmItem">
 												<img
 													className="imageUrl"
@@ -32,14 +33,6 @@ function Catalog(props) {
 													/>
 													<h3>Film {index + 1}</h3>
 													<h2>{film.title}</h2>
-													{/*
-													<div className="details">
-														<p>👨: {film.directors}</p>
-														<p>📖: {film.releaseState} {film.year}</p>
-														<p>⏰: {film.runtimeStr}</p>
-														<p>{film.plot}</p>
-													</div>
-													*/}
 												</div>
 											</Link>
 										</Col>
@@ -47,6 +40,7 @@ function Catalog(props) {
 								})}
 
 						</div>
+						<Footer />
 					</div>
 				</Row>
 			</Container>
