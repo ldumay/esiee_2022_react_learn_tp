@@ -190,6 +190,7 @@ function Questionnaire(props) {
 							<p><i>Questionnaire générer.</i></p>
 						</Col>
 					</Row>
+					<Footer />
 				</div>
 			</Container>
 		</div>
