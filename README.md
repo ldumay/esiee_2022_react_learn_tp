@@ -1,17 +1,18 @@
 # Projet React - FlexÔCinosh
+
 ## Créer un jeux concours sur le cinéma :
 
-## Collaborateurs - Estimation des membres
+### Collaborateurs - Estimation des membres
 - __5/5__ - Maxence HENNEKEIN : maxence.hennekein@edu.esiee-it.fr
 - __4/5__ - Bilal MOUHIB : bilal.mouhib@edu.esiee-it.fr
 - __4/5__ - Chen ZHIHAO : zhihao.chen@edu.esiee-it.fr
 - __5/5__ - Loïc DUMAY : loic.dumay@edu.itescia.fr
 - __3.5/5__ - Quentin NARDY : quentin.nardy@edu.itescia.fr
 
-## Langages du projst
+### Langages du projst
 - ReactJS (inclus HTML / CSS / JS / JSX)
 
-## Librairies
+### Librairies
 - Axios :
   - axios - v0.25.0"
 - Phone Input :
@@ -29,12 +30,22 @@
 - React SASS for use SCSS :
   - sass - v1.49.0"
 
-## Schémas - IHM et UML
+### Petit pour run le projet
 
-## IHM
+Requis : NodeJS / React
+
+Pour pouvoir vérifier le projet :
+```npm update```
+
+Pour pouvoir le lancer :
+```npm start```
+
+### Schémas - IHM et UML
+
+#### IHM
 
 ![IHM](_readme_img/IHM.jpg)
 
-### UML __(non terminé)__
+#### UML __(non terminé)__
 
 ![UML](_readme_img/UML.jpg)
