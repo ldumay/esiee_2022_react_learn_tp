@@ -4,6 +4,7 @@ import Film from "../models/Film"
 import FilmsInfos from "../views/FilmsInfos"
 import Header from "./Header"
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 function Wishlist(currentUser) {
 	//let filmList = currentUser.filmList;
@@ -37,6 +38,10 @@ function Wishlist(currentUser) {
                     <Row>
                         {/* Liste des films affichés */}
                         <div className="catalog">
+                            <Col md="12" align="center">
+                                <h2>Sera dispo dans la version 2.0, promis 😅</h2>
+                                <br/>
+                            </Col>
 
                             {/* Boucle */}
                             {filmList.map((film) => (
@@ -63,6 +68,12 @@ function Wishlist(currentUser) {
                                 </Col>
                             )
                             )}
+
+                            <Col md="12" align="center">
+                                <Link to="/catalog">
+                                    <Button variant="danger" type="submit">Retourner à la liste des films</Button>
+                                </Link>
+                            </Col>
 
                         </div>
                     </Row>

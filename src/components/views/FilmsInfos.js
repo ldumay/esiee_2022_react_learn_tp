@@ -1,5 +1,5 @@
 import '../../styles/FilmsInfos.scss'
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Button, Col, Container, Row, Table } from 'react-bootstrap';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
@@ -57,11 +57,17 @@ function FilmsInfos(props) {
 								</Table>
 							</Row>
 							<Row>
-								<form>
-									<Link to="/catalog">
-										<input type="submit" value="Retour" />
-									</Link>
-								</form>
+								<Col align="center">
+									<form>
+										<Link to="/catalog">
+											<Button variant="danger" type="submit">Retourner à la liste des films</Button>
+										</Link>
+										<br/><br/>
+										<Link to="/wishlist">
+											<Button variant="success" type="submit">Ajouter à la liste de souhaite<br/>(Déso, trop tard pour continué 😅)</Button>
+										</Link>
+									</form>
+								</Col>
 							</Row>
 						</Col>
 					</Row>
