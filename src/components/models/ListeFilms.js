@@ -26,5 +26,9 @@ class ListeFilms {
 		this.listFilms.pop(film)
 		console.log('Film "' + film + '" supprimé de la liste.')
 	}
+
+	includes(film) {
+		return this.listFilms.includes(film);
+	}
 }
 export default ListeFilms

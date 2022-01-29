@@ -1,16 +1,4 @@
 [
-    {
-        "id" : 1,
-        "nom" : "Admin",
-        "prenom" : "Admin",
-        "dateNaissance" : "1993-10-22",
-        "mail" : "hello@ldumay.fr"
-    },
-    {
-        "id" : 2,
-        "nom" : "Dumay",
-        "prenom" : "Loïc",
-        "dateNaissance" : "1993-10-22",
-        "mail" : "loic.dumay@edu.itescia.fr"
-    }
+	"user@email.com",
+	"user@email.fr"
 ]
