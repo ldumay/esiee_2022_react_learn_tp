@@ -1,37 +1,48 @@
 import '../../styles/Catalog.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import Header from './Header'
+import "../../styles/FilmListStyles.scss";
+import { Link } from 'react-router-dom';
 
-function Catalog() {
+
+function Catalog(props) {
+
+
 	return (
 		<div>
-        <Header />
-        <Container>
-            <div className="page">
-                <Row>
-                    {/* Liste des films affichés */}
-                    <div className="catalog">
+			<Header />
+			<Container>
+				<Row>
+					<div className="page">
+						<h1>Films going out soon</h1>
 
-                        {/* Modèle d'une affiche de film */}
-                        <Col md="3" className="choixFilm">
-                            <a href="#"
-                                >
-                                <div className="choixFilmItem">
-                                    <img
-                                        className="imageUrl"
-                                        alt="imageUrl"
-                                        src="https://images-na.ssl-images-amazon.com/images/I/91Rk2MjVnyL._RI_.jpg"
-                                    />
-                                    <h3>Film #1</h3>
-                                </div>
-                            </a>
-                        </Col>
+						{/* Display data from API */}
+						<div className="films">
+							{props.films &&
+								props.films.map((film, index) => {
+									console.log({index})
+									return (
+										<div className="film" key={index}>
+											<h3>Film {index + 1}</h3>
+											<h2>{film.title}</h2>
+											<Link to={{ pathname: "/film-infos", state: {id: {index}}}}>
+												<img src={film.image} alt="Affiche" />
+											</Link>
+											<div className="details">
+												<p>👨: {film.directors}</p>
+												<p>📖: {film.releaseState} {film.year}</p>
+												<p>⏰: {film.runtimeStr}</p>
+												<p>{film.plot}</p>
+											</div>
+										</div>
+									);
+								})}
 
-                    </div>
-                </Row>
-            </div>
-        </Container>
-        </div>
+						</div>
+					</div>
+				</Row>
+			</Container>
+		</div>
 	)
 }
 export default Catalog
