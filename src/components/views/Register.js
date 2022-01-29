@@ -62,11 +62,11 @@ function Register(props) {
 
 		props.setUser(new User(inputLastName, inputFirstName, inputAge, inputEmail));
 
-		console.log(`nom,       ${inputLastName}`,);
-		console.log(`prénom,    ${inputFirstName}`,);
-		console.log(`age,       ${inputAge}`,);
-		console.log(`tel,       ${inputPhone_number}`,);
-		console.log(`email,     ${inputEmail}`,);
+		console.log(inputLastName);
+		console.log(inputFirstName);
+		console.log(inputAge);
+		console.log(inputPhone_number);
+		console.log(inputEmail);
 	}
 
 	function topMessage() {
@@ -131,16 +131,16 @@ function Register(props) {
 										placeholder="E-mail" />
 								</Form.Group>
 
-								<Col align="center">
-									<form onSubmit={handleSubmit}>
-										<Link to="/register/Check_user">
-											<input className="btn btn-success" type="submit" value="Valider l'inscription" />
-										</Link>
-									</form>
-								</Col>
 							</Form>
 						</Col>
 						<Col md="2"></Col>
+					</Row>
+					<Row>
+						<form onSubmit={handleSubmit}>
+							<Link to="/register/Check_user">
+								<input type="submit" value="Valider l'inscription" />
+							</Link>
+						</form>
 					</Row>
 				</div>
 			</Container>
