@@ -44,8 +44,8 @@ function App() {
 				<Route exact path="/register"			 element={RegisterElements} />
 				<Route exact path="/register/Check_user" element={CheckUserElements} />
 				<Route exact path="/questions"			 element={<Questionnaire currentUser={currentUser} />} />
-				<Route exact path="/catalog"			 element={<Catalog 		 currentUser={currentUser} films = {ListeFilms} setFilms = {setFilms}/>} />
-				<Route exact path="/film-infos" 		 element={<FilmsInfos 	 currentUser={currentUser} films = {ListeFilms} setFilms = {setFilms}/>} />
+				<Route exact path="/catalog"			 element={<Catalog 		 currentUser={currentUser} films = {ListeFilms}/>} />
+				<Route exact path="/film-infos" 		 element={<FilmsInfos 	 currentUser={currentUser} films = {ListeFilms}/>} />
 				<Route exact path="/wishlist" 			 element={<Wishlist 	 currentUser={currentUser} />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>

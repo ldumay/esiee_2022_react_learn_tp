@@ -4,7 +4,8 @@ import Header from './Header';
 
 function FilmsInfos(props) {
 	
-	let film = props.films[6]
+	let film = props.films
+	console.log(film);
 
 	return (
 		<div>
@@ -16,7 +17,7 @@ function FilmsInfos(props) {
 							<img
 								className="imageUrl"
 								alt="Affiche du props.film"
-								src={props.film.image}
+								src={film.image}
 							/>
 						</Col>
 						<Col md="7">
@@ -25,27 +26,27 @@ function FilmsInfos(props) {
 									<tbody>
 										<tr>
 											<td className="leftElements"><p><b>Titre original : </b></p></td>
-											<td><p>{props.film.title}</p></td>
+											<td><p>{film.title}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Date :</b></p></td>
-											<td><p>{props.film.releaseState} {props.film.year}</p></td>
+											<td><p>{film.releaseState} {film.year}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Public :</b></p></td>
-											<td><p>{props.film.rating}</p></td>
+											<td><p>{film.rating}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Durée :</b></p></td>
-											<td><p>{props.film.runTimeStr}</p></td>
+											<td><p>{film.runTimeStr}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Réalisation :</b></p></td>
-											<td><p>{props.film.directors}</p></td>
+											<td><p>{film.directors}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Acteurs :</b></p></td>
-											<td><p>{props.film.stars}</p></td>
+											<td><p>{film.stars}</p></td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Lien :</b></p></td>
@@ -61,7 +62,7 @@ function FilmsInfos(props) {
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Description :</b></p></td>
-											<td><p>{props.film.plot}</p></td>
+											<td><p>{film.plot}</p></td>
 										</tr>
 									</tbody>
 								</Table>
