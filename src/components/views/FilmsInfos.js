@@ -1,6 +1,7 @@
 import '../../styles/FilmsInfos.scss'
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
 function FilmsInfos(props) {
 	
@@ -54,8 +55,16 @@ function FilmsInfos(props) {
 									</tbody>
 								</Table>
 							</Row>
+							<Row>
+								<form>
+									<Link to="/catalog">
+										<input type="submit" value="Retour" />
+									</Link>
+								</form>
+							</Row>
 						</Col>
 					</Row>
+					
 				</div>
 			</Container>
 		</div>
