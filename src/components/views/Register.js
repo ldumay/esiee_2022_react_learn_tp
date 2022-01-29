@@ -12,7 +12,7 @@ function Register(props) {
 	const [inputFirstName, setFirstName] = useState()
 	const [inputLastName, setLastName] = useState()
 	const [inputAge, setage] = useState()
-	const [inputPhone_number, setPhone_number] = useState()
+	const [inputPhone_number, setPhone_number] = useState(33)
 	const [inputEmail, setEmail] = useState()
 
 	function checkValue(type, value) {
@@ -132,15 +132,23 @@ function Register(props) {
 								</Form.Group>
 
 								<Col align="center">
-									<form onSubmit={handleSubmit}>
-										<Link to="/register/Check_user">
-											<input className="btn btn-success" type="submit" value="Valider l'inscription" />
-										</Link>
-									</form>
+									<Button
+										variant="primary"
+										type="submit"
+										onClick={() => alert("Je conscends à vendre mes informations à Satan")}>
+										Validation RGPD
+									</Button>
 								</Col>
 							</Form>
 						</Col>
 						<Col md="2"></Col>
+					</Row>
+					<Row>
+						<form onSubmit={handleSubmit}>
+							<Link to="/register/Check_user">
+								<input type="submit" value="Valider l'inscription" />
+							</Link>
+						</form>
 					</Row>
 				</div>
 			</Container>

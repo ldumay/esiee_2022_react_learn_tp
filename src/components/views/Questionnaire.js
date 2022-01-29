@@ -44,8 +44,8 @@ function Questionnaire(props){
     function checkGoodResponse(response){
         var x = 0
         questionsGenerator.map((question, index) => {
-            if(index+1==currentQuestion){
-                if( (response == question.Correct) && (x<1) ){
+            if(index+1===currentQuestion){
+                if( (response === question.Correct) && (x<1) ){
                     console.log("Bonne réponse")
                     x++
                 } else {
@@ -91,7 +91,7 @@ function Questionnaire(props){
                         <Col>
                             {questionsGenerator.map((question, index) => (
                                 <div key={question.id}>
-                                    {index+1==currentQuestion &&
+                                    {index+1===currentQuestion &&
                                         <div>
                                             <h3><u>{question.Text}</u></h3>
                                             <Form>
@@ -119,7 +119,7 @@ function Questionnaire(props){
                                     }
                                 </div>
                             ))}
-                            {totalResponse==5 &&
+                            {totalResponse===5 &&
                                 <div>
                                     <br/>
                                     <form onSubmit={handleSubmit}>
