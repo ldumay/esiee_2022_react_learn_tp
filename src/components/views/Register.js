@@ -151,7 +151,7 @@ function Register(props) {
 							</Link>
 						</form>
 					</Row>
-					<Header />
+					<Footer />
 				</div>
 			</Container>
 		</div>
