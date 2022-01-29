@@ -4,7 +4,7 @@ import Header from './Header';
 
 function FilmsInfos(props) {
 	
-	let film = film
+	let film = props.film
 
 	return (
 		<div>
@@ -46,18 +46,6 @@ function FilmsInfos(props) {
 										<tr>
 											<td className="leftElements"><p><b>Acteurs :</b></p></td>
 											<td><p>{film.stars}</p></td>
-										</tr>
-										<tr>
-											<td className="leftElements"><p><b>Lien :</b></p></td>
-											<td>
-												<p>
-													<a
-														href="https://www.imdb.com/title/tt4633694/"
-														target="_blank"
-														rel="noreferrer"
-													>IMDB</a>
-												</p>
-											</td>
 										</tr>
 										<tr>
 											<td className="leftElements"><p><b>Description :</b></p></td>

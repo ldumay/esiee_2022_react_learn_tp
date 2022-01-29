@@ -12,7 +12,7 @@ function Register(props) {
 	const [inputFirstName, setFirstName] = useState()
 	const [inputLastName, setLastName] = useState()
 	const [inputAge, setage] = useState()
-	const [inputPhone_number, setPhone_number] = useState(33)
+	const [inputPhone_number, setPhone_number] = useState()
 	const [inputEmail, setEmail] = useState()
 
 	function checkValue(type, value) {
