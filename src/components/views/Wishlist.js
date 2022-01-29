@@ -9,6 +9,15 @@ function Wishlist(currentUser) {
 
 	let filmList = [
 		{
+			id: 0,
+			nom: "Film #1",
+			imageUrl: "https://images-na.ssl-images-amazon.com/images/I/91Rk2MjVnyL._RI_.jpg",
+			genre: "action",
+			dateSortie: new Date(2022, 1, 26).toDateString(),
+			description: "description",
+			ratio: 15
+		},
+		{
 			id: 1,
 			nom: "Film",
 			imageUrl: "img.png",
@@ -29,45 +38,23 @@ function Wishlist(currentUser) {
 	]
 
 	return (
-        <div>
-            <Header />
-            <Container>
-                <div className="page">
-                    <Row>
-                        {/* Liste des films affichés */}
-                        <div className="catalog">
-
-                            {/* Boucle */}
-                            {filmList.map((film) => (
-
-                                /* <FilmsInfos film={film} /> */
-                                
-                                /* Modèle d'une affiche de film */
-
-                                <Col md="3" className="choixFilm" key={`${film.id}-${film.nom}`}>
-                                    <a href="#"
-                                        >
-                                        <div className="choixFilmItem">
-                                            <img
-                                                className="imageUrl"
-                                                alt="imageUrl"
-                                                src="https://images-na.ssl-images-amazon.com/images/I/91Rk2MjVnyL._RI_.jpg"
-                                            />
-                                            <h3>Film #1</h3>
-                                        </div>
-                                    </a>
-                                    <Button variant="danger" className="btnSupprFilm">
-                                        Retirer
-                                    </Button>
-                                </Col>
-                            )
-                            )}
-
-                        </div>
-                    </Row>
-                </div>
-            </Container>
-        </div>
+		<div>
+			<Header />
+			<Container>
+				<div className="page">
+					<Row>
+						{/* Liste des films affichés */}
+						<div className="catalog">
+							{/* Boucle */}
+							{filmList.map((film) => (
+								< FilmsInfos film={film} />
+							))
+							}
+						</div>
+					</Row>
+				</div>
+			</Container>
+		</div>
 	)
 }
 export default Wishlist
