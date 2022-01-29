@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import Header from "./Header"
 import '../../styles/NotFound.scss'
 import imageNotFound from '../../images/image_404.gif';
+import Footer from "./Footer";
 
 function NotFound(){
 
@@ -18,7 +19,7 @@ function NotFound(){
                                 alt="image_not_found"
                                 src={imageNotFound}
                                 />
-                            <br/>
+                            <br/><br/>
                             <p>
                                 La page recherché n'existe pas.
                                 <br/> Merci de revenir sur l'
@@ -30,6 +31,7 @@ function NotFound(){
                             </p>
                         </Col>
                     </Row>
+                    <Footer />
                 </div>
             </Container>
         </div>

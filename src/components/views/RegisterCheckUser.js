@@ -4,6 +4,7 @@ import JsonFileService from '../service/JsonFileHandler';
 import Header from './Header'
 
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 function RegisterCheckUser(props) {
 	const userInJson = JsonFileService.getUserRegisteredList();
@@ -21,6 +22,7 @@ function RegisterCheckUser(props) {
 							<Button variant="danger" type="button" onClick={() => { navigate('/register', { replace: true }) }}> Retour à l'inscription </Button>
 						</Col>
 					</Row>
+					<Footer />
 				</div>
 			);
 		} else {
@@ -35,6 +37,7 @@ function RegisterCheckUser(props) {
 						</Col>
 					</Row>
 					<button type="button" onClick={(e) => Checkmail()}> Next page </button>
+					<Footer />
 				</div>
 			);
 		}

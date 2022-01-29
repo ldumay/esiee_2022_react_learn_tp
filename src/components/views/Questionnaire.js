@@ -4,6 +4,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import Header from './Header'
 import QuestionsGenerator from '../controllers/QuestionsGenerator'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 function Questionnaire(props){  
     const [currentQuestion, updateCurrentQuestion] = useState(1)
@@ -176,6 +177,7 @@ function Questionnaire(props){
                             <p><i>Questionnaire générer.</i></p>
                         </Col>
                     </Row>
+                    <Footer />
                 </div>
             </Container>
         </div>
