@@ -5,7 +5,7 @@ import Header from './Header'
 import QuestionsGenerator from '../controllers/QuestionsGenerator'
 import { Link } from 'react-router-dom'
 
-function Questionnaire(){  
+function Questionnaire(props){  
     const [currentQuestion, updateCurrentQuestion] = useState(1)
     const [totalResponse, updateTotalResponse] = useState(0)
     const [goodResponse, updateCountGoodResponse] = useState(0)
@@ -68,8 +68,8 @@ function Questionnaire(){
     /* Validation du formulaire */
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("goodResponse : "+goodResponse); 
-        checkConst()  
+        //-
+        props.setTotalGoodResponse(goodResponse)
     }
 
     return( 

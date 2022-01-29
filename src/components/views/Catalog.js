@@ -1,7 +1,6 @@
 import '../../styles/Catalog.scss'
 import { Col, Container, Row } from 'react-bootstrap'
 import Header from './Header'
-import "../../styles/FilmListStyles.scss";
 import { Link } from 'react-router-dom';
 
 
@@ -15,26 +14,35 @@ function Catalog(props) {
 				<Row>
 					<div className="page">
 						<h1>Films going out soon</h1>
+						<hr/>
 
 						{/* Display data from API */}
-						<div className="films">
+						<div className="catalog">
 							{props.films &&
 								props.films.map((film, index) => {
 									console.log({index})
 									return (
-										<div className="film" key={index}>
-											<h3>Film {index + 1}</h3>
-											<h2>{film.title}</h2>
+										<Col md="3" className="choixFilm" key={index}>
 											<Link to={{ pathname: "/film-infos", state: {id: {index}}}}>
-												<img src={film.image} alt="Affiche" />
+												<div className="choixFilmItem">
+												<img
+													className="imageUrl"
+													alt="Affiche"
+													src={film.image}
+													/>
+													<h3>Film {index + 1}</h3>
+													<h2>{film.title}</h2>
+													{/*
+													<div className="details">
+														<p>👨: {film.directors}</p>
+														<p>📖: {film.releaseState} {film.year}</p>
+														<p>⏰: {film.runtimeStr}</p>
+														<p>{film.plot}</p>
+													</div>
+													*/}
+												</div>
 											</Link>
-											<div className="details">
-												<p>👨: {film.directors}</p>
-												<p>📖: {film.releaseState} {film.year}</p>
-												<p>⏰: {film.runtimeStr}</p>
-												<p>{film.plot}</p>
-											</div>
-										</div>
+										</Col>
 									);
 								})}
 

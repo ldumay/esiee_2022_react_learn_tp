@@ -17,6 +17,10 @@
             padding: 5px;
             border: 1px solid rgba(0, 0, 0, 1);
             background: rgba(67, 124, 190, 1.000);
+            .imageUrl{
+                max-width: 100%;
+                max-height: 190px;
+            }
         }
         .btnSupprFilm{
             margin-top: 5px;
