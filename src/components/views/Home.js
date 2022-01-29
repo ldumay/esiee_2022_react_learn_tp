@@ -21,7 +21,7 @@ function Home(props){
                     <p className="production">
                         Réalisé par :
                         <br/>Maxence HENNEKEIN - Bilal MOUHIB - Chen ZHIHAO
-                        <br/>Loïc DUMAY - Quentin NARDY"
+                        <br/>Loïc DUMAY - Quentin NARDY
                     </p>
                 </div>
             </div>
