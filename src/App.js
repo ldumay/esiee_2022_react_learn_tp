@@ -41,10 +41,10 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route exact path="/" 					 element={<Home />} />
-				<Route exact path="/result" 			 element={<Result 		 currentUser={currentUser} />} />
+				<Route exact path="/result" 			 element={<Result 		 currentUser={currentUser} totalGoodResponse = {totalGoodResponse} />} />
 				<Route exact path="/register"			 element={RegisterElements} />
 				<Route exact path="/register/Check_user" element={CheckUserElements} />
-				<Route exact path="/questions"			 element={<Questionnaire currentUser={currentUser} totalGoodResponse={totalGoodResponse} setTotalGoodResponse={setTotalGoodResponse} />} />
+				<Route exact path="/questions"			 element={<Questionnaire currentUser={currentUser} totalGoodResponse = {totalGoodResponse} setTotalGoodResponse={setTotalGoodResponse} />} />
 				<Route exact path="/catalog"			 element={<Catalog 		 currentUser={currentUser} films = {ListeFilms} setFilms = {setFilms}/>} />
 				<Route exact path="/film-infos" 		 element={<FilmsInfos 	 currentUser={currentUser} films = {ListeFilms} setFilms = {setFilms}/>} />
 				<Route exact path="/wishlist" 			 element={<Wishlist 	 currentUser={currentUser} />} />

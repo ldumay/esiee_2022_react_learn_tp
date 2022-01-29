@@ -5,180 +5,190 @@ import Header from './Header'
 import QuestionsGenerator from '../controllers/QuestionsGenerator'
 import { Link } from 'react-router-dom'
 
-function Questionnaire(props){  
-    const [currentQuestion, updateCurrentQuestion] = useState(1)
-    const [totalResponse, updateTotalResponse] = useState(0)
-    const [goodResponse, updateCountGoodResponse] = useState(0)
-    const [badResponse, updateCountBadResponse] = useState(0)
-    const [currentQuestionSelected, updateCurrentQuestionSelected] = useState(false)
-    const [response, updateResponse] = useState()
+function Questionnaire(props) {
+	const [currentQuestion, updateCurrentQuestion] = useState(1)
+	const [totalResponse, updateTotalResponse] = useState(0)
+	const [goodResponse, updateCountGoodResponse] = useState(0)
+	const [hasSelectedAnswer, updateHasSelectedAnswer] = useState(false)
+	const [wasLastAnswerValid, updateLastAnswerValid] = useState(false);
+	const [response, updateResponse] = useState()
 
-    var questionsGenerator = new QuestionsGenerator()
+	var questionsGenerator = new QuestionsGenerator()
 
-    /* Vérifiation des const */
-    function checkConst(){
-        console.log("[For debugg]")
-        console.log("Question : "+currentQuestion+"/"+questionsGenerator.length)
-        console.log("Good="+goodResponse+" - Bad="+badResponse+" - Ttx="+totalResponse)
-    }
+	/* Vérifiation des const */
+	function checkConst() {
+		console.log("[For debugg]")
+		console.log("Question : " + currentQuestion + "/" + questionsGenerator.length)
+		console.log("Good=" + goodResponse + " - Ttx=" + totalResponse)
+		// Problème dans la passage de donnée, on actualise donc souvent la valeur de bonne réponse
+		props.setTotalGoodResponse(goodResponse)
+	}
 
-    /* Click on radios */
-    const handleSelectResponse = (e) => {
-        const target = e.target
-        const valueRadio = target.type === 'radio' ? target.value : target.checked
-        updateResponse(valueRadio)
-        updateTotalResponse(goodResponse+badResponse)
-        updateCurrentQuestionSelected(true)
-        checkGoodResponse(response)
-    }
+	/* Click on radios */
+	const handleSelectResponse = (e) => {
+		const target = e.target
+		const valueRadio = target.type === 'radio' ? target.value : target.checked
+		updateResponse(valueRadio)
+		checkGoodResponse(response)
+	}
 
-    /* Click on button */
-    const checkSelectResponses = (e) => {
-        if(currentQuestionSelected){
-            updateCurrentQuestion(currentQuestion+1)
-            updateCurrentQuestionSelected(false)
-        } else {
-            alert("Vous n'avez pas choisi de réponse.")
-        }
-    }
-    function checkGoodResponse(response){
-        var x = 0
-        questionsGenerator.map((question, index) => {
-            if(index+1==currentQuestion){
-                if( (response == question.Correct) && (x<1) ){
-                    console.log("Bonne réponse")
-                    x++
-                } else {
-                    console.log("Mauvaise réponse")
-                }
-            }
-        })
-        if(x>0){
-            console.log("x="+x+" --> x>0")
-            updateCountGoodResponse(goodResponse+1)
-            updateTotalResponse(goodResponse+badResponse)
-        } else {
-            console.log("x="+x+" --> x<=0")
-            updateCountBadResponse(badResponse+1)
-            updateTotalResponse(goodResponse+badResponse)
-        }
-        checkConst()
-    }
+	/* Click on button */
+	const checkChangeQuestion = (e) => {
+		if (hasSelectedAnswer) {
+			// change to next question
+			updateCurrentQuestion(currentQuestion + 1)
+			updateHasSelectedAnswer(false)
+		} else {
+			alert("Vous n'avez pas choisi de réponse.")
+		}
+	}
 
-    /* Validation du formulaire */
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        //-
-        props.setTotalGoodResponse(goodResponse)
-    }
+	function checkGoodResponse(response) {
+		var isCorrect = false
+		questionsGenerator.map((question, index) => {
+			if ((index + 1) == currentQuestion) {
+				if ((response === question.Correct) && (!isCorrect)) {
+					isCorrect = true;
+				}
+			}
+			return;
+		})
+		console.log(hasSelectedAnswer, isCorrect, wasLastAnswerValid);
+		if (hasSelectedAnswer) {
+			if (isCorrect) {
+				//check previous answer is not a good answer
+				if (!wasLastAnswerValid) {
+					updateCountGoodResponse(goodResponse + 1)
+				}
+				updateLastAnswerValid(true);
+			} else {
+				if (wasLastAnswerValid) {
+					updateCountGoodResponse(goodResponse - 1)
+				}
+				updateLastAnswerValid(false)
+			}
+		} else {
+			if (isCorrect) {
+				updateCountGoodResponse(goodResponse + 1);
+				updateLastAnswerValid(true)
+			} else {
+				updateLastAnswerValid(false)
+			}
+			updateTotalResponse(totalResponse + 1)
+			updateHasSelectedAnswer(true)
+		}
+		checkConst()
+	}
 
-    return( 
-        <div>
-            <Header />
-            <Container>
-                <div className="page">
-                    <Row className="questionnaireTop">
-                        <Col>
-                            {currentQuestion>0 && currentQuestion<6 && 
-                                <div>
-                                    <h1>Question #{currentQuestion}</h1>
-                                    <hr/>
-                                </div>
-                            }
-                        </Col>
-                    </Row>
-                    <Row className="questionnaireContent">
-                        <Col>
-                            {questionsGenerator.map((question, index) => (
-                                <div key={question.id}>
-                                    {index+1==currentQuestion &&
-                                        <div>
-                                            <h3><u>{question.Text}</u></h3>
-                                            <Form>
-                                                <Row>
-                                                    {question.answers.map((answer, index) => (
-                                                        <Col md="12">
-                                                            {['radio'].map((type) => (
-                                                            <div key={`inline-${type}`}>
-                                                                <Form.Check
-                                                                    inline
-                                                                    label={answer}
-                                                                    value={answer}
-                                                                    name="choix"
-                                                                    type={type}
-                                                                    id={`inline-${type}-1`}
-                                                                    onChange={handleSelectResponse}
-                                                                />
-                                                            </div>
-                                                            ))}
-                                                        </Col>
-                                                    ))}
-                                                </Row>
-                                            </Form>
-                                        </div>
-                                    }
-                                </div>
-                            ))}
-                            {totalResponse==5 &&
-                                <div>
-                                    <br/>
-                                    <form onSubmit={handleSubmit}>
-                                        <Link to="/result">
-                                            <Button
-                                                type="submit"
-                                                variant="success"
-                                                //onClick={}
-                                            >
-                                                Valider mon questionnaire
-                                            </Button>
-                                        </Link>
-                                    </form>
-                                </div>
-                            }
-                        </Col>
-                    </Row>
-                    <Row className="questionnaireButtons">
-                        <Col>
-                            <div>
-                                {
-                                /*currentQuestion>1 &&
-                                    <Button 
-                                        variant="outline-secondary"
-                                        onClick={()=>updateCurrentQuestion(currentQuestion-1)}
-                                    >
-                                        Question précédente
-                                    </Button>
-                                */
-                                }
-                            </div>
-                        </Col>
-                        <Col>
-                            <div>
-                                {currentQuestion<5 &&
-                                    <Button
-                                        variant="outline-secondary"
-                                        onClick={checkSelectResponses}
-                                    >
-                                        Question suivante
-                                    </Button>
-                                }
-                                <Button
-                                    variant="outline-primary"
-                                    onClick={() => checkConst()}
-                                >
-                                    TEST
-                                </Button>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row className="questionnaireBottom">
-                        <Col>
-                            <p><i>Questionnaire générer.</i></p>
-                        </Col>
-                    </Row>
-                </div>
-            </Container>
-        </div>
-    )
+	/* Validation du formulaire */
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		//-
+		props.setTotalGoodResponse(goodResponse)
+	}
+
+	return (
+		<div>
+			<Header />
+			<Container>
+				<div className="page">
+					<Row className="questionnaireTop">
+						<Col>
+							{currentQuestion > 0 && currentQuestion < 6 &&
+								<div>
+									<h1>Question #{currentQuestion}</h1>
+									<hr />
+								</div>
+							}
+						</Col>
+					</Row>
+					<Row className="questionnaireContent">
+						<Col>
+							{questionsGenerator.map((question, index) => (
+								<div key={question.id}>
+									{(index + 1) == currentQuestion &&
+										<div>
+											<h3><u>{question.Text}</u></h3>
+											<Form onSubmit={handleSubmit}>
+												<Row>
+													{question.answers.map((answer, index) => (
+														<Col md="12">
+															{['radio'].map((type) => (
+																<div key={`inline-${type}`}>
+																	<Form.Check
+																		inline
+																		label={answer}
+																		value={answer}
+																		name="choix"
+																		type={type}
+																		id={`inline-${type}-1`}
+																		onChange={handleSelectResponse}
+																	/>
+																</div>
+															))}
+														</Col>
+													))}
+												</Row>
+											</Form>
+										</div>
+									}
+								</div>
+							))}
+							{totalResponse == 5 &&
+								<div>
+									<form onSubmit={handleSubmit}>
+										<Link to="/result">
+											<Button type="submit" variant="success"	>
+												Valider mon questionnaire
+											</Button>
+										</Link>
+									</form>
+								</div>
+							}
+						</Col>
+					</Row>
+					<Row className="questionnaireButtons">
+						<Col>
+							<div>
+								{
+									/*currentQuestion>1 &&
+										<Button 
+											variant="outline-secondary"
+											onClick={()=>updateCurrentQuestion(currentQuestion-1)}
+										>
+											Question précédente
+										</Button>
+									*/
+								}
+							</div>
+						</Col>
+						<Col>
+							<div>
+								{currentQuestion < 5 &&
+									<Button
+										variant="outline-secondary"
+										onClick={checkChangeQuestion}
+									>
+										Question suivante
+									</Button>
+								}
+								<Button
+									variant="outline-primary"
+									onClick={() => checkConst()}
+								>
+									TEST
+								</Button>
+							</div>
+						</Col>
+					</Row>
+					<Row className="questionnaireBottom">
+						<Col>
+							<p><i>Questionnaire générer.</i></p>
+						</Col>
+					</Row>
+				</div>
+			</Container>
+		</div>
+	)
 }
 export default Questionnaire

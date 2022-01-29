@@ -15,7 +15,7 @@ function Result(props){
                         <Col align="center">
                             <h1>Merci !</h1>
                             <h2>Questionnaire terminé :</h2>
-                            <p>Vous avez réussi {props.totalGoodResponse}/5.</p>
+                            <p>Vous avez réussi {props.totalGoodResponse} / 5.</p>
                             <Link to="/catalog">
                                 <Button
                                     type="submit"
