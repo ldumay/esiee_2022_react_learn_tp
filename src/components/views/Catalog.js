@@ -6,19 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 function Catalog(props) {
-	/*const [films, setFilms] = useState()
-	const domain = "https://imdb-api.com/en/API"
-	const comingSoonUrl = "/ComingSoon/k_hiba3sak";
 
-	const fetchData = async () => {
-		const response = await axios.get(domain + comingSoonUrl);
-
-		setFilms(response.data.items);
-	}
-	useEffect(() => {
-        // write your code here, it's like componentWillMount
-        fetchData();
-    }, [])*/
 
 	return (
 		<div>
@@ -32,11 +20,12 @@ function Catalog(props) {
 						<div className="films">
 							{props.films &&
 								props.films.map((film, index) => {
+									console.log({index})
 									return (
 										<div className="film" key={index}>
 											<h3>Film {index + 1}</h3>
 											<h2>{film.title}</h2>
-											<Link to="/film-infos">
+											<Link to={{ pathname: "/film-infos", state: {id: {index}}}}>
 												<img src={film.image} alt="Affiche" />
 											</Link>
 											<div className="details">
