@@ -1,6 +1,6 @@
 # Projet React - FlexÔCinosh
 
-> 🚨 **Projet déplacer ici ▶▶ : [https://github.com/2023-esiee-projectlab/esiee-it_2022_react_learn_tp](https://github.com/2023-esiee-projectlab/esiee-it_2022_react_learn_tp)**
+> 🚨 **Projet déplacer ici ▶▶ : [https://github.com/2023-esiee-projectlab/M2_2022_react_learn_tp](https://github.com/2023-esiee-projectlab/M2_2022_react_learn_tp)**
 
 ## Créer un jeux concours sur le cinéma :
 
